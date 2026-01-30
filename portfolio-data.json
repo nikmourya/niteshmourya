@@ -1,0 +1,374 @@
+{
+  "citationData": {
+    "googleScholar": {
+      "citations": 93,
+      "hIndex": 3,
+      "i10Index": 2
+    },
+    "researchGate": {
+      "reads": 0,
+      "citations": 0,
+      "recommendations": 0
+    }
+  },
+  "publications": [
+    {
+      "title": "Land Use/Land Cover Dynamics Study and Prediction In Jaipur City using CA Markov Model",
+      "journal": "GeoJournal (Springer)",
+      "doi": "10.1007/s10708-022-10593-9",
+      "year": 2022
+    },
+    {
+      "title": "Forest carbon sequestration mapping and economic quantification in Askot Wildlife Sanctuary",
+      "journal": "Ecological Informatics (ELSEVIER)",
+      "doi": "10.1016/j.ecoinf.2023.102428",
+      "year": 2023
+    },
+    {
+      "title": "Evaluation of Shoreline Alteration Along the Jagatsinghpur District Coast, India (1990-2020)",
+      "journal": "Ocean and Coastal Management (ELSEVIER)",
+      "doi": "10.1016/j.ocecoaman.2024.107132",
+      "year": 2024
+    },
+    {
+      "title": "Assessment of Chemicals Hazard and Resilience in an Educational Setup: A case study of Jamia Millia Islamia University, India",
+      "journal": "Indian Journal of Environmental Protection",
+      "doiLink": "https://www.e-ijep.co.in/44-4-340-351/",
+      "doiText": "44-4-340-351",
+      "year": 2024
+    },
+    {
+      "title": "Evaluating the Efficiency of ML based LULC Prediction Models",
+      "journal": "Technological Forecasting & Social Change",
+      "status": "Under Review",
+      "year": 2024
+    },
+    {
+      "title": "Monitoring Wetland Hydrology and Surface Water Transformation in Jaipur Urban Ecosystem using GeoAI",
+      "journal": "Journal of Hydrology",
+      "status": "Under Review",
+      "year": 2025
+    }
+  ],
+  "experience": [
+    {
+      "role": "Research Internship",
+      "org": "MSME PPDC AGRA",
+      "period": "25 Nov 2025 - 25 Dec 2025",
+      "details": [
+        "Completed specialized online training on research methodologies and online internship frameworks",
+        "Gained practical skills in structured research processes, virtual collaboration tools, and internship project management",
+        "Applied insights to enhance GeoAI models for urban environmental analysis and remote sensing workflows"
+      ]
+    },
+    {
+      "role": "Research Assistant (Geospatial Analysis)",
+      "org": "National Law School of India University (NLSIU), Bengaluru",
+      "period": "June 2025 - Present",
+      "project": "Cooling the City: Assessing the Impact of Green and Blue Spaces on Urban Heat Islands for Evidence-Based Urban Policy and Planning in Jaipur and Bengaluru (Funded by University of Toronto)",
+      "details": [
+        "Conducting geospatial analysis for the international project on urban cooling",
+        "Responsible for evaluation and mapping of geospatial datasets pertaining to green and blue spaces and urban heat islands across selected urban areas",
+        "Expertise in spatial analysis, remote sensing applications for urban climate modelling, and evidence-based policy support through advanced GIS techniques"
+      ]
+    },
+    {
+      "role": "Assistant Professor of GIS and Remote Sensing",
+      "org": "GEOTECH GIS Training Institute & Consultancy Services",
+      "period": "August 2023 - September 2024",
+      "details": [
+        "Teaching GIS and Remote Sensing courses",
+        "Guiding PhD scholars in geospatial research",
+        "Project Assistant at Flyview GIS Technology Pvt. Ltd. (Part of GeoTech)"
+      ]
+    },
+    {
+      "role": "GIS-Faculty / Analyst (Part-time)",
+      "org": "GeoCatalog - Institute of Geoinformatics and Research",
+      "period": "June 2021 - Present",
+      "details": [
+        "GIS-Analyst providing PhD consultancy in GIS and Remote Sensing earth observation related science",
+        "Teaching and conducting revenue mapping projects",
+        "Research consultancy services for doctoral scholars"
+      ]
+    },
+    {
+      "role": "GIS-Faculty",
+      "org": "Swastik Edustart",
+      "period": "February 2022 - July 2023",
+      "details": [
+        "Teaching GIS and Remote Sensing courses",
+        "Assisting PhD scholars with GIS-RS techniques research application",
+        "Expertise in generating highly accurate Land Use Land Cover with different models and algorithms, change analysis, and prediction"
+      ]
+    },
+    {
+      "role": "Internship (Corporate)",
+      "org": "Tech Culture, New Delhi",
+      "period": "August 2020 - January 2021",
+      "details": [
+        "Digitizing building footprint and correcting available vector data",
+        "Quality control and spatial data management"
+      ]
+    }
+  ],
+  "journalPositions": [
+    {
+      "title": "Reviewer",
+      "journal": "GeoJournal (Springer)",
+      "link": "https://link.springer.com/journal/10708",
+      "period": "January 2024 - Present"
+    },
+    {
+      "title": "Reviewer",
+      "journal": "Open Journal of Geology (OJG)",
+      "period": "May 2024 - Present"
+    }
+  ],
+  "workshops": [
+    {
+      "title": "Poster and Presentation Competition - National Space Day",
+      "date": "23 August 2025",
+      "org": "Department of Remote Sensing & Geoinformatics, MDSU, Ajmer",
+      "achievement": "Secured Second Position in both categories",
+      "papers": [
+        "Research Poster: Habitat Dynamics and Biodiversity Assessment in Rajaji National Park (1994-2024) Using GeoAI Model",
+        "Presentation: Applications of Remote Sensing and Geospatial Technologies for Achieving SDGs"
+      ]
+    },
+    {
+      "title": "Symposium on Conservation of Wetlands",
+      "date": "3 February 2025",
+      "org": "Department of Environmental Science & Department of Remote Sensing and Geoinformatics, MDSU, Ajmer",
+      "papers": [
+        "Comparative Analysis of Sentinel-2 and Landsat-8 for Wetland and Drought Monitoring Using NDWI and MNDWI",
+        "Impact of Urbanization on Wetlands in Jaipur: A Spatiotemporal Analysis Using NDWI, MNDWI, and SVM-Based Prediction (GeoAI Model)"
+      ]
+    },
+    {
+      "title": "LANDSLIDE RISK ASSESSMENT AND MITIGATION IN INDIA",
+      "date": "1-2 November 2022",
+      "org": "Department of Geography, Jamia Millia Islamia, New Delhi",
+      "papers": [
+        "AHP integrated GIS based Landslide Susceptibility Mapping in the Garhwal Himalayan Region of India"
+      ]
+    },
+    {
+      "title": "Building Urban Resilience through Advanced Technology",
+      "date": "January 2022",
+      "org": "Amity University and National Disaster Management",
+      "description": "Learned about building urban resilience and developing urban green space, improving urban environment"
+    },
+    {
+      "title": "5th World Congress on Disaster Management",
+      "date": "24-27 November 2021",
+      "org": "Indian Institute of Technology, Delhi",
+      "papers": [
+        "Assessment of Chemicals Hazard and Resilience in an Educational Setup: A case study of Jamia Millia Islamia University, India"
+      ]
+    },
+    {
+      "title": "Earth Resources Management in Current Scenario",
+      "date": "5 September 2020",
+      "org": "Suresh Gyan Vihar University",
+      "description": "One Day Virtual Symposium"
+    },
+    {
+      "title": "Implication of Covid-19 on Sustainable Development",
+      "date": "27-28 June 2020",
+      "org": "International Geography Union (IGU) - INDIA",
+      "papers": [
+        "Urban Growth Prediction Using Geospatial Techniques: A Case Study of Jaipur, Rajasthan, India"
+      ]
+    },
+    {
+      "title": "The Science of Places: Exploring Career Goals and Competencies",
+      "date": "31 May 2020",
+      "org": "School of Basic and Applied Sciences & Department of Geography, Adam University",
+      "description": "Webinar on future geographers"
+    },
+    {
+      "title": "Future cities, Sustainable Development and Geospatial Technologies",
+      "date": "24 May 2020",
+      "org": "Department of Studies and Research in Geography, Rani Channamma University, Karnataka",
+      "papers": [
+        "Spatio-Temporal Analysis of Shoreline Change Along Jagatsinghpur"
+      ]
+    },
+    {
+      "title": "Urban Health Hazard and Preparedness in Global Pandemic COVID-19",
+      "date": "2 May 2020",
+      "org": "Department of Geography, Shaheed Bhagat Singh College, University of Delhi"
+    }
+  ],
+  "skills": [
+    {
+      "category": "GIS & Spatial Analysis",
+      "tools": [
+        "ESRI ArcGIS Desktop – Vector and raster data creation, spatial analysis, choropleth mapping, network analysis, interpolation, and hydrological modeling.",
+        "ArcGIS Pro – Advanced vector/raster workflows, geoprocessing automation, spatial modeling, and 3D analysis capabilities.",
+        "QGIS – Vector/raster data management, spatial analysis, geoprocessing tools, proximity analysis, overlay operations, terrain analysis, and multi-format data integration.",
+        "Global Mapper – High-precision digitization, spatial analysis, and multi-format data conversion for GIS workflows."
+      ]
+    },
+    {
+      "category": "Image Processing & Classification",
+      "tools": [
+        "ERDAS Imagine – Digital image preprocessing (radiometric and atmospheric correction, image enhancement), geometric correction and orthorectification, supervised and unsupervised classification, accuracy assessment (achieving up to 0.97 Kappa accuracy in LULC mapping), and multi-temporal change detection.",
+        "ArcGIS Pro – AI-based supervised image classification using machine learning algorithms (SVM, Random Tree, Random Forest) with integrated accuracy assessment and validation.",
+        "QGIS – Semi-automatic LULC classification using SCP (Semi-Automatic Classification Plugin), LULC change detection, and future land use prediction using the MOLUSCE plugin.",
+        "Google Earth Engine – Cloud-based LULC mapping, AI-based classification (SVM, Random Forest), SAR data processing, wetland change detection, GeoAI modeling for biodiversity and ecosystem, and GeoAI modeling for Park Cooling Parameters.",
+        "IDRISI SELVA & TerrSet – LULC map generation, change analysis, and future LULC prediction using the LCM model, Biodiversity Analysis."
+      ]
+    },
+    {
+      "category": "GeoAI Modeling",
+      "tools": [
+        "Green and Blue Space Cooling Analysis – GeoAI-based XGBoost model: Park Cooling Distance or Lmax (Gradient and Decay Method), Park Cooling Contribution, Park Cooling Area, Cooling Gradient, Cooling Efficiency.",
+        "Biodiversity and Ecosystem Analysis – GeoAI-based Random Forest modeling.",
+        "LULC Modeling – Support Vector Machine, XGBoost, Random Forest, and Random Tree on GEE and ArcGIS Pro."
+      ]
+    },
+    {
+      "category": "Programming & Development",
+      "tools": [
+        "Python - Geodata processing and spatial analysis",
+        "JavaScript - Google Earth Engine scripting",
+        "HTML - Web development",
+        "C - Programming fundamentals"
+      ]
+    },
+    {
+      "category": "Additional Tools",
+      "tools": [
+        "AutoCAD - 2D data drawing",
+        "Geo-Server - Web-based vector/raster data sharing",
+        "MS Office - Word, Excel, PowerPoint",
+        "Computer Hardware - Assembling, troubleshooting, and maintenance"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "M.Sc. (Remote Sensing and Geoinformatics)",
+      "institution": "Maharshi Dayanand Saraswati University, Ajmer",
+      "period": "October 2024 - Present (3rd Semester)",
+      "grade": "1st Semester: 77%, and 2nd Semester: 78%",
+      "description": "Built foundation in satellite remote sensing, GIS, geodesy, GPS, and digital cartography. Expanded into thermal, microwave, and hyperspectral remote sensing, aerial photography, photogrammetry, digital image classification (including ANN and fuzzy methods). Practical work included image processing, map preparation, and seminar presentations. Presented research posters at departmental competitions and national conferences.",
+      "expertise": "GeoAI Integration in Spatial Analysis, Remote Sensing, GeoAI modeling on GEE, Python and JavaScript"
+    },
+    {
+      "degree": "M.A./M.Sc. (Geography)",
+      "institution": "Amer Maharaja P.G. College, University of Rajasthan",
+      "period": "June 2017 - December 2020",
+      "grade": "55.7%",
+      "description": "Studied Advanced Geography of India, Geomorphology, Climatology, and Oceanography. Developed theoretical knowledge in research methodology and practical skills in map interpretation, surveying, cartography, GIS, Remote Sensing, and quantitative techniques.",
+      "expertise": "Physical Geography"
+    },
+    {
+      "degree": "B.A. (Geography, History, Political Science)",
+      "institution": "Amer Maharaja P.G. College, University of Rajasthan",
+      "period": "June 2017 - August 2020",
+      "grade": "50% (Geography: 58.5%)",
+      "description": "Multidisciplinary foundation covering Physical Geography (Geomorphology, Climatology, Oceanography), Human Geography, and Geography of India and Rajasthan. Practical work included map interpretation, topographical analysis, field surveys, and report writing."
+    },
+    {
+      "degree": "Senior Secondary (Geography, History, Political Science)",
+      "institution": "Board of Secondary Education, Rajasthan",
+      "period": "May 2014",
+      "grade": "64% (Geography: 79%)",
+      "description": "Learned basics of Physical Geography, Human Geography, and introduction to Remote Sensing and Aerial Photography."
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Automated Feature Extraction from High Resolution Images",
+      "institution": "Indian Institute of Remote Sensing (ISRO) - Distance Learning",
+      "date": "29 December 2023",
+      "description": "Image feature identification and extraction, pixel/sub-pixel/object-based information extraction, machine learning and deep learning applications"
+    },
+    {
+      "title": "SAR Data Processing & Applications with RISAT-1A/EOS",
+      "institution": "Indian Institute of Remote Sensing (ISRO) - Distance Learning",
+      "date": "1 May 2023",
+      "description": "SAR data and its applications in spatial conditions such as disaster studies"
+    },
+    {
+      "title": "Geodata Processing using Python",
+      "institution": "Indian Institute of Remote Sensing (ISRO) - Distance Learning",
+      "date": "15 January 2023",
+      "description": "Basic Python and Python programming language in geodata processing"
+    },
+    {
+      "title": "Diploma in GIS and Remote Sensing",
+      "institution": "Swastik Edustart (ITTEC)",
+      "date": "June 2020",
+      "description": "Comprehensive training in GIS and Remote Sensing, paper presentations at international and national conferences"
+    },
+    {
+      "title": "DCA (Diploma in Computer Application)",
+      "institution": "DOS Computer Information Technology, Jaipur",
+      "date": "August 2012",
+      "description": "Computer applications and fundamentals"
+    },
+    {
+      "title": "Computer Hardware Diploma",
+      "institution": "Statisworld Education",
+      "date": "October 2012",
+      "description": "Computer hardware assembling, troubleshooting, and hardware replacement"
+    }
+  ],
+  "profile": {
+    "name": "Nitesh Kumar Mourya",
+    "title": "GeoAI Specialist & Remote Sensing Expert",
+    "location": "89, Sadbhawana Nagar, Nangal Susawatan, Amer, Jaipur, Rajasthan, India",
+    "phone": "+91 8740970764",
+    "email": "nik.gee.code@gmail.com",
+    "dob": "23 May 1997",
+    "fatherName": "Jai Narayan Raigar",
+    "motherName": "Sahayata Devi",
+    "maritalStatus": "Married",
+    "nationality": "Indian",
+    "languages": "Hindi (Native), English (Professional Efficiency)",
+    "hobbies": [
+      "Geospatial data analysis and visualization",
+      "Research paper writing and academic publishing",
+      "Coding and scripting for spatial analysis",
+      "Exploring new GeoAI techniques and methodologies",
+      "Reading scientific literature on remote sensing and urban geography"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/nitesh-kumar-mourya-775497216/",
+      "scholar": "https://scholar.google.com/citations?user=N2YS5d0AAAAJ&hl=en",
+      "researchgate": "https://www.researchgate.net/profile/Nitesh-Mourya-7",
+      "orcid": "https://orcid.org/0000-0001-6391-9936"
+    }
+  },
+  "researchInterests": [
+    {
+      "title": "Geoinformatics and GeoAI",
+      "topics": [
+        "Application of machine learning and deep learning in Earth Observation",
+        "LULC classification using multi-source satellite data",
+        "SAR-based flood and hazard assessment",
+        "GeoAI-driven spatial decision support systems"
+      ]
+    },
+    {
+      "title": "Himalayan Ecosystem & Glaciology",
+      "topics": [
+        "Mountain ecosystems and climate sensitivity",
+        "Glacier dynamics and GLOF risks",
+        "Cryosphere monitoring with optical/SAR data"
+      ]
+    },
+    {
+      "title": "Urban Geography & Climate",
+      "topics": [
+        "Urban Heat Island assessment",
+        "Urban expansion patterns",
+        "Climate change in cities"
+      ]
+    }
+  ]
+}

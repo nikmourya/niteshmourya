@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nitesh Kumar Mourya | GeoAI Specialist &amp; Remote Sensing Expert</title>
+  <meta name="description" content="GeoAI Specialist and Remote Sensing Expert. Research Assistant at NLSIU Bengaluru. Expertise in GIS, Google Earth Engine, machine learning for spatial analytics. 6+ publications, 93+ citations." />
+  <meta name="keywords" content="GeoAI, Remote Sensing, GIS, Geospatial Analysis, Earth Observation, Machine Learning, Google Earth Engine, ArcGIS, QGIS, LULC, Nitesh Kumar Mourya" />
+  <meta name="author" content="Nitesh Kumar Mourya" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0e1a" />
+  <!-- Update href with your actual portfolio URL when deployed -->
+  <link rel="canonical" href="https://niteshmourya.github.io/" />
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png" />
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+  <link rel="manifest" href="./assets/site.webmanifest" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://niteshmourya.github.io/" />
+  <meta property="og:title" content="Nitesh Kumar Mourya | GeoAI Specialist &amp; Remote Sensing Expert" />
+  <meta property="og:description" content="GeoAI Specialist and Remote Sensing Expert. Research at NLSIU Bengaluru. Expertise in GIS, Earth Engine, machine learning for spatial analytics. 6+ publications." />
+  <meta property="og:image" content="https://niteshmourya.github.io/assets/Photo.jpg" />
+  <meta property="og:site_name" content="Nitesh Kumar Mourya - GeoAI Portfolio" />
+  <meta property="og:locale" content="en_IN" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nitesh Kumar Mourya | GeoAI Specialist &amp; Remote Sensing Expert" />
+  <meta name="twitter:description" content="GeoAI Specialist and Remote Sensing Expert. Expertise in GIS, Earth Engine, machine learning for spatial analytics. 6+ publications, 93+ citations." />
+  <meta name="twitter:image" content="https://niteshmourya.github.io/assets/Photo.jpg" />
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nitesh Kumar Mourya",
+    "jobTitle": "GeoAI Specialist & Remote Sensing Expert",
+    "description": "GeoAI Specialist with expertise in geospatial analysis, GIS, and machine learning for spatial analytics. Research Assistant at National Law School of India University.",
+    "url": "https://niteshmourya.github.io/",
+    "image": "https://niteshmourya.github.io/assets/Photo.jpg",
+    "email": "nik.gee.code@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/nitesh-kumar-mourya-775497216/",
+      "https://scholar.google.com/citations?user=N2YS5d0AAAAJ",
+      "https://www.researchgate.net/profile/Nitesh-Mourya-7",
+      "https://orcid.org/0000-0001-6391-9936"
+    ],
+    "knowsAbout": ["GeoAI", "Remote Sensing", "GIS", "Geospatial Analysis", "Machine Learning", "Google Earth Engine", "ArcGIS", "LULC Classification"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Maharshi Dayanand Saraswati University, Ajmer"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "National Law School of India University"
+    }
+  }
+  </script>
+  <link rel="preload" href="./assets/Photo.jpg" as="image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: {
+              DEFAULT: '#0a0e1a',
+              lighter: '#0f1729',
+              card: '#141b2d',
+              border: 'rgba(34, 211, 238, 0.15)',
+            },
+            cyan: {
+              DEFAULT: '#22d3ee',
+              dark: '#06b6d4',
+              light: '#67e8f9',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #0a0e1a;
+      color: #e2e8f0;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+
+    /* Animated grid background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(34, 211, 238, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 211, 238, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: gridMove 20s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes gridMove {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      100% {
+        transform: translate(50px, 50px);
+      }
+    }
+
+    /* Gradient orbs */
+    .gradient-orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .orb-1 {
+      top: 10%;
+      left: 20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, #22d3ee 0%, transparent 70%);
+      animation: float 15s ease-in-out infinite;
+    }
+
+    .orb-2 {
+      bottom: 20%;
+      right: 10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, #06b6d4 0%, transparent 70%);
+      animation: float 20s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(30px, -30px) scale(1.1);
+      }
+    }
+
+    #root {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Navigation */
+    nav {
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(34, 211, 238, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+      background: rgba(10, 14, 26, 0.95);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Cards */
+    .card {
+      background: linear-gradient(145deg, rgba(20, 27, 45, 0.6), rgba(15, 23, 41, 0.4));
+      border: 1px solid rgba(34, 211, 238, 0.15);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #22d3ee, transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(34, 211, 238, 0.4);
+      box-shadow: 0 20px 60px rgba(34, 211, 238, 0.15);
+    }
+
+    .card:hover::before {
+      transform: translateX(100%);
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%);
+      color: #0a0e1a;
+      font-weight: 600;
+      padding: 0.875rem 2rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(34, 211, 238, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(34, 211, 238, 0.5);
+    }
+
+    .btn-secondary {
+      background: rgba(34, 211, 238, 0.1);
+      color: #22d3ee;
+      font-weight: 600;
+      padding: 0.875rem 2rem;
+      border-radius: 12px;
+      border: 1px solid rgba(34, 211, 238, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(34, 211, 238, 0.2);
+      border-color: #22d3ee;
+    }
+
+    /* Stats */
+    .stat-card {
+      background: linear-gradient(135deg, rgba(34, 211, 238, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.1), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .stat-card:hover::before {
+      left: 100%;
+    }
+
+    .stat-card:hover {
+      transform: scale(1.05);
+      border-color: rgba(34, 211, 238, 0.4);
+    }
+
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #22d3ee;
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0.75rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, #22d3ee, #06b6d4);
+      opacity: 0.3;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.6rem;
+      top: 0rem;
+      width: 14px;
+      height: 14px;
+      background: #22d3ee;
+      border: 3px solid #0a0e1a;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover::before {
+      transform: scale(1.3);
+      box-shadow: 0 0 0 6px rgba(34, 211, 238, 0.3);
+    }
+
+    /* Tags */
+    .tag {
+      display: inline-block;
+      background: rgba(34, 211, 238, 0.1);
+      color: #22d3ee;
+      padding: 0.375rem 0.875rem;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      margin: 0.25rem;
+      transition: all 0.2s ease;
+    }
+
+    .tag:hover {
+      background: rgba(34, 211, 238, 0.2);
+      border-color: #22d3ee;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 6rem 1.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #ffffff 0%, #22d3ee 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.25rem, 3vw, 2rem);
+      color: #94a3b8;
+      margin-bottom: 2rem;
+    }
+
+    /* Section Headers */
+    .section-header {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 3rem;
+    }
+
+    .section-header::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(90deg, #22d3ee, transparent);
+    }
+
+    /* Scroll Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .fade-in:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .fade-in:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    .fade-in:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0f1729;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(34, 211, 238, 0.3);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(34, 211, 238, 0.5);
+    }
+
+    /* Form Inputs */
+    input,
+    textarea {
+      background: rgba(20, 27, 45, 0.6);
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 12px;
+      padding: 0.7rem !important;
+      color: #e2e8f0;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #22d3ee;
+      box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.1);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #64748b;
+    }
+
+    /* Loading Animation */
+    .loading-spinner {
+      border: 3px solid rgba(34, 211, 238, 0.1);
+      border-top-color: #22d3ee;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Social Links */
+    .social-link {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(34, 211, 238, 0.1);
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 12px;
+      color: #22d3ee;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: rgba(34, 211, 238, 0.2);
+      border-color: #22d3ee;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(34, 211, 238, 0.2);
+    }
+
+    /* Profile Image */
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 4px solid rgba(34, 211, 238, 0.3);
+      box-shadow: 0 0 0 8px rgba(34, 211, 238, 0.1), 0 20px 40px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .profile-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 12px rgba(34, 211, 238, 0.2), 0 25px 50px rgba(34, 211, 238, 0.3);
+    }
+
+    /* Responsive - Mobile First Enhancements */
+    @media (min-width: 1024px) {
+      .stat-card {
+        padding: 2rem;
+        border-radius: 16px;
+      }
+    }
+
+    /* Scroll offset for fixed nav anchor links */
+    section[id^="section-"] {
+      scroll-margin-top: 5rem;
+    }
+
+    @media (min-width: 768px) {
+      section[id^="section-"] {
+        scroll-margin-top: 6rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .card {
+        padding: 2rem;
+        border-radius: 16px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-section {
+        padding: 5rem 1rem 3rem;
+        min-height: auto;
+      }
+
+      .hero-title {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+        margin-bottom: 1rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .stat-value {
+        font-size: 1.5rem;
+      }
+
+      .card {
+        padding: 1.25rem;
+      }
+
+      .card:hover {
+        transform: none;
+      }
+
+      .timeline {
+        padding-left: 1.5rem;
+      }
+
+      .timeline::before {
+        left: 0.375rem;
+      }
+
+      .timeline-item::before {
+        left: -1.4rem;
+        width: 10px;
+        height: 10px;
+        border-width: 2px;
+      }
+
+      .profile-image {
+        width: 140px;
+        height: 140px;
+      }
+
+      .orb-1,
+      .orb-2 {
+        width: 200px;
+        height: 200px;
+        opacity: 0.1;
+      }
+
+      .section-header {
+        margin-bottom: 1.5rem;
+      }
+
+      .section-header::after {
+        width: 40%;
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+      }
+
+      .social-link svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.875rem;
+        min-height: 44px;
+      }
+    }
+
+    @media (min-width: 641px) and (max-width: 768px) {
+      .hero-section {
+        padding: 5rem 1.5rem 4rem;
+      }
+
+      .stat-value {
+        font-size: 1.75rem;
+      }
+
+      .card {
+        padding: 1.5rem;
+      }
+
+      .profile-image {
+        width: 160px;
+        height: 160px;
+      }
+
+      .orb-1,
+      .orb-2 {
+        width: 280px;
+        height: 280px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card:hover {
+        transform: translateY(-2px);
+      }
+
+      .stat-card:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    @media (min-width: 769px) {
+      .card:hover {
+        transform: translateY(-4px);
+      }
+    }
+
+    /* Prevent hover effects on touch devices */
+    @media (hover: none) {
+      .card:hover {
+        transform: none;
+      }
+
+      .stat-card:hover {
+        transform: none;
+      }
+
+      .social-link:hover {
+        transform: none;
+      }
+
+      .profile-image:hover {
+        transform: none;
+      }
+    }
+
+    /* Section spacing - consistent responsive padding */
+    .section-padding {
+      padding: 3rem 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .section-padding {
+        padding: 4rem 1.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .section-padding {
+        padding: 6rem 2rem;
+      }
+    }
+
+    /* Prevent horizontal overflow */
+    .overflow-x-hidden {
+      overflow-x: hidden;
+    }
+
+    /* Touch-friendly tap targets */
+    @media (max-width: 768px) {
+
+      nav button,
+      .social-link,
+      .btn-primary,
+      .btn-secondary {
+        min-height: 44px;
+        min-width: 44px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="gradient-orb orb-1"></div>
+  <div class="gradient-orb orb-2"></div>
+
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="application/json" id="portfolio-data">
+{"citationData":{"googleScholar":{"citations":93,"hIndex":3,"i10Index":2},"researchGate":{"reads":0,"citations":0,"recommendations":0}},"publications":[{"title":"Land Use/Land Cover Dynamics Study and Prediction In Jaipur City using CA Markov Model","journal":"GeoJournal (Springer)","doi":"10.1007/s10708-022-10593-9","year":2022},{"title":"Forest carbon sequestration mapping and economic quantification in Askot Wildlife Sanctuary","journal":"Ecological Informatics (ELSEVIER)","doi":"10.1016/j.ecoinf.2023.102428","year":2023},{"title":"Evaluation of Shoreline Alteration Along the Jagatsinghpur District Coast, India (1990-2020)","journal":"Ocean and Coastal Management (ELSEVIER)","doi":"10.1016/j.ocecoaman.2024.107132","year":2024},{"title":"Assessment of Chemicals Hazard and Resilience in an Educational Setup: A case study of Jamia Millia Islamia University, India","journal":"Indian Journal of Environmental Protection","doiLink":"https://www.e-ijep.co.in/44-4-340-351/","doiText":"44-4-340-351","year":2024},{"title":"Evaluating the Efficiency of ML based LULC Prediction Models","journal":"Technological Forecasting \u0026 Social Change","status":"Under Review","year":2024},{"title":"Monitoring Wetland Hydrology and Surface Water Transformation in Jaipur Urban Ecosystem using GeoAI","journal":"Journal of Hydrology","status":"Under Review","year":2025}],"experience":[{"role":"Research Internship","org":"MSME PPDC AGRA","period":"25 Nov 2025 - 25 Dec 2025","details":["Completed specialized online training on research methodologies and online internship frameworks","Gained practical skills in structured research processes, virtual collaboration tools, and internship project management","Applied insights to enhance GeoAI models for urban environmental analysis and remote sensing workflows"]},{"role":"Research Assistant (Geospatial Analysis)","org":"National Law School of India University (NLSIU), Bengaluru","period":"June 2025 - Present","project":"Cooling the City: Assessing the Impact of Green and Blue Spaces on Urban Heat Islands for Evidence-Based Urban Policy and Planning in Jaipur and Bengaluru (Funded by University of Toronto)","details":["Conducting geospatial analysis for the international project on urban cooling","Responsible for evaluation and mapping of geospatial datasets pertaining to green and blue spaces and urban heat islands across selected urban areas","Expertise in spatial analysis, remote sensing applications for urban climate modelling, and evidence-based policy support through advanced GIS techniques"]},{"role":"Assistant Professor of GIS and Remote Sensing","org":"GEOTECH GIS Training Institute \u0026 Consultancy Services","period":"August 2023 - September 2024","details":["Teaching GIS and Remote Sensing courses","Guiding PhD scholars in geospatial research","Project Assistant at Flyview GIS Technology Pvt. Ltd. (Part of GeoTech)"]},{"role":"GIS-Faculty / Analyst (Part-time)","org":"GeoCatalog - Institute of Geoinformatics and Research","period":"June 2021 - Present","details":["GIS-Analyst providing PhD consultancy in GIS and Remote Sensing earth observation related science","Teaching and conducting revenue mapping projects","Research consultancy services for doctoral scholars"]},{"role":"GIS-Faculty","org":"Swastik Edustart","period":"February 2022 - July 2023","details":["Teaching GIS and Remote Sensing courses","Assisting PhD scholars with GIS-RS techniques research application","Expertise in generating highly accurate Land Use Land Cover with different models and algorithms, change analysis, and prediction"]},{"role":"Internship (Corporate)","org":"Tech Culture, New Delhi","period":"August 2020 - January 2021","details":["Digitizing building footprint and correcting available vector data","Quality control and spatial data management"]}],"journalPositions":[{"title":"Reviewer","journal":"GeoJournal (Springer)","link":"https://link.springer.com/journal/10708","period":"January 2024 - Present"},{"title":"Reviewer","journal":"Open Journal of Geology (OJG)","period":"May 2024 - Present"}],"workshops":[{"title":"Poster and Presentation Competition - National Space Day","date":"23 August 2025","org":"Department of Remote Sensing \u0026 Geoinformatics, MDSU, Ajmer","achievement":"Secured Second Position in both categories","papers":["Research Poster: Habitat Dynamics and Biodiversity Assessment in Rajaji National Park (1994-2024) Using GeoAI Model","Presentation: Applications of Remote Sensing and Geospatial Technologies for Achieving SDGs"]},{"title":"Symposium on Conservation of Wetlands","date":"3 February 2025","org":"Department of Environmental Science \u0026 Department of Remote Sensing and Geoinformatics, MDSU, Ajmer","papers":["Comparative Analysis of Sentinel-2 and Landsat-8 for Wetland and Drought Monitoring Using NDWI and MNDWI","Impact of Urbanization on Wetlands in Jaipur: A Spatiotemporal Analysis Using NDWI, MNDWI, and SVM-Based Prediction (GeoAI Model)"]},{"title":"LANDSLIDE RISK ASSESSMENT AND MITIGATION IN INDIA","date":"1-2 November 2022","org":"Department of Geography, Jamia Millia Islamia, New Delhi","papers":["AHP integrated GIS based Landslide Susceptibility Mapping in the Garhwal Himalayan Region of India"]},{"title":"Building Urban Resilience through Advanced Technology","date":"January 2022","org":"Amity University and National Disaster Management","description":"Learned about building urban resilience and developing urban green space, improving urban environment"},{"title":"5th World Congress on Disaster Management","date":"24-27 November 2021","org":"Indian Institute of Technology, Delhi","papers":["Assessment of Chemicals Hazard and Resilience in an Educational Setup: A case study of Jamia Millia Islamia University, India"]},{"title":"Earth Resources Management in Current Scenario","date":"5 September 2020","org":"Suresh Gyan Vihar University","description":"One Day Virtual Symposium"},{"title":"Implication of Covid-19 on Sustainable Development","date":"27-28 June 2020","org":"International Geography Union (IGU) - INDIA","papers":["Urban Growth Prediction Using Geospatial Techniques: A Case Study of Jaipur, Rajasthan, India"]},{"title":"The Science of Places: Exploring Career Goals and Competencies","date":"31 May 2020","org":"School of Basic and Applied Sciences \u0026 Department of Geography, Adam University","description":"Webinar on future geographers"},{"title":"Future cities, Sustainable Development and Geospatial Technologies","date":"24 May 2020","org":"Department of Studies and Research in Geography, Rani Channamma University, Karnataka","papers":["Spatio-Temporal Analysis of Shoreline Change Along Jagatsinghpur"]},{"title":"Urban Health Hazard and Preparedness in Global Pandemic COVID-19","date":"2 May 2020","org":"Department of Geography, Shaheed Bhagat Singh College, University of Delhi"}],"skills":[{"category":"GIS \u0026 Spatial Analysis","tools":["ESRI ArcGIS Desktop – Vector and raster data creation, spatial analysis, choropleth mapping, network analysis, interpolation, and hydrological modeling.","ArcGIS Pro – Advanced vector/raster workflows, geoprocessing automation, spatial modeling, and 3D analysis capabilities.","QGIS – Vector/raster data management, spatial analysis, geoprocessing tools, proximity analysis, overlay operations, terrain analysis, and multi-format data integration.","Global Mapper – High-precision digitization, spatial analysis, and multi-format data conversion for GIS workflows."]},{"category":"Image Processing \u0026 Classification","tools":["ERDAS Imagine – Digital image preprocessing (radiometric and atmospheric correction, image enhancement), geometric correction and orthorectification, supervised and unsupervised classification, accuracy assessment (achieving up to 0.97 Kappa accuracy in LULC mapping), and multi-temporal change detection.","ArcGIS Pro – AI-based supervised image classification using machine learning algorithms (SVM, Random Tree, Random Forest) with integrated accuracy assessment and validation.","QGIS – Semi-automatic LULC classification using SCP (Semi-Automatic Classification Plugin), LULC change detection, and future land use prediction using the MOLUSCE plugin.","Google Earth Engine – Cloud-based LULC mapping, AI-based classification (SVM, Random Forest), SAR data processing, wetland change detection, GeoAI modeling for biodiversity and ecosystem, and GeoAI modeling for Park Cooling Parameters.","IDRISI SELVA \u0026 TerrSet – LULC map generation, change analysis, and future LULC prediction using the LCM model, Biodiversity Analysis."]},{"category":"GeoAI Modeling","tools":["Green and Blue Space Cooling Analysis – GeoAI-based XGBoost model: Park Cooling Distance or Lmax (Gradient and Decay Method), Park Cooling Contribution, Park Cooling Area, Cooling Gradient, Cooling Efficiency.","Biodiversity and Ecosystem Analysis – GeoAI-based Random Forest modeling.","LULC Modeling – Support Vector Machine, XGBoost, Random Forest, and Random Tree on GEE and ArcGIS Pro."]},{"category":"Programming \u0026 Development","tools":["Python - Geodata processing and spatial analysis","JavaScript - Google Earth Engine scripting","HTML - Web development","C - Programming fundamentals"]},{"category":"Additional Tools","tools":["AutoCAD - 2D data drawing","Geo-Server - Web-based vector/raster data sharing","MS Office - Word, Excel, PowerPoint","Computer Hardware - Assembling, troubleshooting, and maintenance"]}],"education":[{"degree":"M.Sc. (Remote Sensing and Geoinformatics)","institution":"Maharshi Dayanand Saraswati University, Ajmer","period":"October 2024 - Present (3rd Semester)","grade":"1st Semester: 77%, and 2nd Semester: 78%","description":"Built foundation in satellite remote sensing, GIS, geodesy, GPS, and digital cartography. Expanded into thermal, microwave, and hyperspectral remote sensing, aerial photography, photogrammetry, digital image classification (including ANN and fuzzy methods). Practical work included image processing, map preparation, and seminar presentations. Presented research posters at departmental competitions and national conferences.","expertise":"GeoAI Integration in Spatial Analysis, Remote Sensing, GeoAI modeling on GEE, Python and JavaScript"},{"degree":"M.A./M.Sc. (Geography)","institution":"Amer Maharaja P.G. College, University of Rajasthan","period":"June 2017 - December 2020","grade":"55.7%","description":"Studied Advanced Geography of India, Geomorphology, Climatology, and Oceanography. Developed theoretical knowledge in research methodology and practical skills in map interpretation, surveying, cartography, GIS, Remote Sensing, and quantitative techniques.","expertise":"Physical Geography"},{"degree":"B.A. (Geography, History, Political Science)","institution":"Amer Maharaja P.G. College, University of Rajasthan","period":"June 2017 - August 2020","grade":"50% (Geography: 58.5%)","description":"Multidisciplinary foundation covering Physical Geography (Geomorphology, Climatology, Oceanography), Human Geography, and Geography of India and Rajasthan. Practical work included map interpretation, topographical analysis, field surveys, and report writing."},{"degree":"Senior Secondary (Geography, History, Political Science)","institution":"Board of Secondary Education, Rajasthan","period":"May 2014","grade":"64% (Geography: 79%)","description":"Learned basics of Physical Geography, Human Geography, and introduction to Remote Sensing and Aerial Photography."}],"certifications":[{"title":"Automated Feature Extraction from High Resolution Images","institution":"Indian Institute of Remote Sensing (ISRO) - Distance Learning","date":"29 December 2023","description":"Image feature identification and extraction, pixel/sub-pixel/object-based information extraction, machine learning and deep learning applications"},{"title":"SAR Data Processing \u0026 Applications with RISAT-1A/EOS","institution":"Indian Institute of Remote Sensing (ISRO) - Distance Learning","date":"1 May 2023","description":"SAR data and its applications in spatial conditions such as disaster studies"},{"title":"Geodata Processing using Python","institution":"Indian Institute of Remote Sensing (ISRO) - Distance Learning","date":"15 January 2023","description":"Basic Python and Python programming language in geodata processing"},{"title":"Diploma in GIS and Remote Sensing","institution":"Swastik Edustart (ITTEC)","date":"June 2020","description":"Comprehensive training in GIS and Remote Sensing, paper presentations at international and national conferences"},{"title":"DCA (Diploma in Computer Application)","institution":"DOS Computer Information Technology, Jaipur","date":"August 2012","description":"Computer applications and fundamentals"},{"title":"Computer Hardware Diploma","institution":"Statisworld Education","date":"October 2012","description":"Computer hardware assembling, troubleshooting, and hardware replacement"}],"profile":{"name":"Nitesh Kumar Mourya","title":"GeoAI Specialist \u0026 Remote Sensing Expert","location":"89, Sadbhawana Nagar, Nangal Susawatan, Amer, Jaipur, Rajasthan, India","phone":"+91 8740970764","email":"nik.gee.code@gmail.com","dob":"23 May 1997","fatherName":"Jai Narayan Raigar","motherName":"Sahayata Devi","maritalStatus":"Married","nationality":"Indian","languages":"Hindi (Native), English (Professional Efficiency)","hobbies":["Geospatial data analysis and visualization","Research paper writing and academic publishing","Coding and scripting for spatial analysis","Exploring new GeoAI techniques and methodologies","Reading scientific literature on remote sensing and urban geography"],"links":{"linkedin":"https://www.linkedin.com/in/nitesh-kumar-mourya-775497216/","scholar":"https://scholar.google.com/citations?user=N2YS5d0AAAAJ\u0026hl=en","researchgate":"https://www.researchgate.net/profile/Nitesh-Mourya-7","orcid":"https://orcid.org/0000-0001-6391-9936"}},"researchInterests":[{"title":"Geoinformatics and GeoAI","topics":["Application of machine learning and deep learning in Earth Observation","LULC classification using multi-source satellite data","SAR-based flood and hazard assessment","GeoAI-driven spatial decision support systems"]},{"title":"Himalayan Ecosystem \u0026 Glaciology","topics":["Mountain ecosystems and climate sensitivity","Glacier dynamics and GLOF risks","Cryosphere monitoring with optical/SAR data"]},{"title":"Urban Geography \u0026 Climate","topics":["Urban Heat Island assessment","Urban expansion patterns","Climate change in cities"]}]}
+  </script>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    function Portfolio() {
+      const [activeSection, setActiveSection] = useState("home");
+      const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+      const [scrolled, setScrolled] = useState(false);
+      const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+      });
+      const [formStatus, setFormStatus] = useState({
+        submitting: false,
+        success: false,
+        error: false,
+        message: ""
+      });
+
+      const [portfolioData, setPortfolioData] = useState(null);
+      const [citationData, setCitationData] = useState({
+        googleScholar: { citations: 93, hIndex: 3, i10Index: 2 },
+        researchGate: { reads: 0, citations: 0, recommendations: 0 },
+      });
+      const [publications, setPublications] = useState([]);
+      const [experience, setExperience] = useState([]);
+      const [journalPositions, setJournalPositions] = useState([]);
+      const [workshops, setWorkshops] = useState([]);
+      const [skills, setSkills] = useState([]);
+      const [education, setEducation] = useState([]);
+      const [certifications, setCertifications] = useState([]);
+      const [profile, setProfile] = useState(null);
+      const [researchInterests, setResearchInterests] = useState([]);
+
+      // Load portfolio data
+      useEffect(() => {
+        try {
+          const dataScript = document.getElementById("portfolio-data");
+          if (dataScript) {
+            const data = JSON.parse(dataScript.textContent);
+            setPortfolioData(data);
+            setCitationData(data.citationData || citationData);
+            setPublications(data.publications || []);
+            setExperience(data.experience || []);
+            setJournalPositions(data.journalPositions || []);
+            setWorkshops(data.workshops || []);
+            setSkills(data.skills || []);
+            setEducation(data.education || []);
+            setCertifications(data.certifications || []);
+            setProfile(data.profile || null);
+            setResearchInterests(data.researchInterests || []);
+          }
+        } catch (error) {
+          console.error("Error loading portfolio data:", error);
+        }
+      }, []);
+
+      // Scroll handler
+      useEffect(() => {
+        const handleScroll = () => {
+          setScrolled(window.scrollY > 50);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+      }, []);
+
+      // Smooth scroll to section
+      const scrollToSection = (sectionId) => {
+        setActiveSection(sectionId);
+        setMobileMenuOpen(false);
+
+        if (sectionId === 'home') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
+        }
+
+        setTimeout(() => {
+          const element = document.getElementById(`section-${sectionId}`);
+          if (element) {
+            const navHeight = 80;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+          }
+        }, 100);
+      };
+
+      // Form handlers
+      const handleFormChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+      };
+
+      const handleFormSubmit = async (e) => {
+        e.preventDefault();
+        setFormStatus({ submitting: true, success: false, error: false, message: "" });
+
+        const targetEmail = profile.email;
+        const formSubmitEndpoint = `https://formsubmit.co/ajax/${encodeURIComponent(targetEmail)}`;
+
+        try {
+          const response = await fetch(formSubmitEndpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            },
+            body: JSON.stringify({
+              name: formData.name,
+              email: formData.email,
+              subject: formData.subject,
+              message: formData.message,
+              _captcha: false,
+              _template: "table",
+              _subject: formData.subject
+            })
+          });
+
+          const data = await response.json();
+
+          if (response.ok && data.success) {
+            setFormStatus({
+              submitting: false,
+              success: true,
+              error: false,
+              message: `Thank you! Your message has been sent successfully to ${targetEmail}`
+            });
+            setFormData({ name: "", email: "", subject: "", message: "" });
+          } else {
+            throw new Error(data.message || "Form submission failed");
+          }
+        } catch (error) {
+          console.error("Form submission error:", error);
+          setFormStatus({
+            submitting: false,
+            success: false,
+            error: true,
+            message: `Sorry, there was an error. Please email directly at ${profile.email}`
+          });
+        }
+      };
+
+      if (!profile) {
+        return (
+          <div className="min-h-screen flex items-center justify-center">
+            <div className="loading-spinner"></div>
+          </div>
+        );
+      }
+
+      const navItems = [
+        { id: 'home', label: 'Home' },
+        { id: 'about', label: 'About' },
+        { id: 'publications', label: 'Publications' },
+        { id: 'experience', label: 'Experience' },
+        { id: 'education', label: 'Education' },
+        { id: 'skills', label: 'Skills' },
+        { id: 'contact', label: 'Contact' },
+      ];
+
+      return (
+        <div className="min-h-screen" role="document">
+          <a href="#main-content" className="absolute left-4 -top-16 z-[60] px-4 py-2 bg-cyan text-dark font-medium rounded-lg transition-all duration-200 focus:top-4 focus:outline-none focus:ring-2 focus:ring-cyan focus:ring-offset-2 focus:ring-offset-dark">
+            Skip to main content
+          </a>
+          {/* Navigation */}
+          <nav className={`sticky top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${scrolled ? 'scrolled' : ''}`} role="navigation" aria-label="Main navigation">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center">
+                    <img src="./assets/Photo.jpg" alt="Nitesh Kumar Mourya - GeoAI Specialist" className="w-full h-full object-cover rounded-full" />
+                  </div>
+                  <span className="text-xl font-bold text-cyan hidden sm:block">N.K. Mourya</span>
+                </div>
+
+                {/* Desktop Menu */}
+                <div className="hidden md:flex items-center gap-8">
+                  {navItems.map((item) => (
+                    <button
+                      key={item.id}
+                      onClick={() => scrollToSection(item.id)}
+                      className={`text-sm font-medium transition-all ${activeSection === item.id
+                          ? 'text-cyan'
+                          : 'text-gray-400 hover:text-cyan'
+                        }`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                  <button
+                    onClick={() => scrollToSection('contact')}
+                    className="btn-primary text-sm"
+                  >
+                    Hire Me
+                  </button>
+                </div>
+
+                {/* Mobile Menu Button */}
+                <button
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  className="md:hidden text-cyan p-2"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {mobileMenuOpen ? (
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    ) : (
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    )}
+                  </svg>
+                </button>
+              </div>
+
+              {/* Mobile Menu */}
+              {mobileMenuOpen && (
+                <div className="md:hidden mt-4 pb-4 space-y-1 border-t border-cyan/10 pt-4">
+                  {navItems.map((item) => (
+                    <button
+                      key={item.id}
+                      onClick={() => scrollToSection(item.id)}
+                      className="block w-full text-left px-4 py-2 text-gray-400 hover:text-cyan hover:bg-dark-card rounded-lg transition-all"
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </nav>
+
+          {/* Hero Section */}
+          <main id="main-content" role="main">
+          <section className="hero-section pt-16 sm:pt-20" aria-label="Introduction">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+              <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div className="fade-in">
+                  <div className="inline-block mb-4 px-4 py-2 bg-cyan/10 border border-cyan/30 rounded-full">
+                    <span className="text-cyan text-sm font-mono">👋 Available for Consulting</span>
+                  </div>
+                  <h1 className="hero-title">
+                    Turning Earth Observation Data into{' '}
+                    <span className="text-cyan">Intelligent Insights</span>
+                  </h1>
+                  <p className="hero-subtitle">
+                    GeoAI specialist with expertise in geospatial analysis, GIS, and machine learning for spatial analytics. Making data-driven decisions for a sustainable future.
+                  </p>
+                  <div className="flex flex-wrap gap-3 sm:gap-4 mt-6 sm:mt-8">
+                    <button onClick={() => scrollToSection('contact')} className="btn-primary flex-1 sm:flex-initial min-w-[120px]">
+                      Get in Touch
+                    </button>
+                    <button onClick={() => scrollToSection('publications')} className="btn-secondary flex-1 sm:flex-initial min-w-[120px]">
+                      View Research
+                    </button>
+                  </div>
+
+                  {/* Stats Row */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-8 sm:mt-12">
+                    <div className="text-center">
+                      <div className="stat-value">{experience.length}+</div>
+                      <div className="text-sm text-gray-400 mt-1">Years Exp</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="stat-value">{publications.length}</div>
+                      <div className="text-sm text-gray-400 mt-1">Publications</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="stat-value">{citationData.googleScholar.citations}</div>
+                      <div className="text-sm text-gray-400 mt-1">Citations</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="stat-value">{citationData.googleScholar.hIndex}</div>
+                      <div className="text-sm text-gray-400 mt-1">h-index</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex justify-center fade-in">
+                  <div className="flex flex-col items-center justify-center gap-6">
+                    <img
+                      src="./assets/Photo.jpg"
+                      alt={`${profile.name} - GeoAI Specialist and Remote Sensing Expert`}
+                      className="profile-image object-cover"
+                    />
+                    {/* Social Links Around Image */}
+                    <div className="flex items-center justify-center gap-2">
+                      <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" className="social-link">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                      </a>
+                      <a href={profile.links.scholar} target="_blank" rel="noopener noreferrer" className="social-link">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
+                        </svg>
+                      </a>
+                      <a href={profile.links.researchgate} target="_blank" rel="noopener noreferrer" className="social-link">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.894 8.221l-1.97-.345-.346-1.971a.3.3 0 0 0-.57 0l-.346 1.97-1.971.346a.3.3 0 0 0 0 .57l1.97.346.346 1.971a.3.3 0 0 0 .57 0l.346-1.97 1.971-.346a.3.3 0 0 0 0-.57z" />
+                        </svg>
+                      </a>
+                      <a href={`mailto:${profile.email}`} className="social-link">
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* About Section */}
+          <section id="section-about" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 sm:mb-12">
+                About Me
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-10 sm:mb-16">
+                <div className="card fade-in">
+                  <h3 className="text-2xl font-bold text-cyan mb-4">Mission</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    To leverage cutting-edge geospatial technologies and artificial intelligence to address pressing environmental and societal challenges. I specialize in transforming complex Earth observation data into actionable intelligence for sustainable development.
+                  </p>
+                </div>
+
+                <div className="card fade-in">
+                  <h3 className="text-2xl font-bold text-cyan mb-4">Vision</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Creating a future where GeoAI-powered insights drive evidence-based policy-making, enabling smarter urban planning, environmental conservation, and climate adaptation strategies worldwide.
+                  </p>
+                </div>
+              </div>
+
+              <div className="card mb-10 sm:mb-16">
+                <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-4 sm:mb-6">
+                  As a <span className="text-cyan font-semibold">GeoAI Specialist</span>, I combine expertise in Remote Sensing, GIS, and Machine Learning to unlock insights from geospatial data. My work spans environmental monitoring, urban planning, and agricultural analytics, leveraging platforms like Google Earth Engine, ArcGIS Pro, QGIS, and ERDAS Imagine.
+                </p>
+                <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-4 sm:mb-6">
+                  Currently serving as a Research Assistant at <span className="text-cyan font-semibold">National Law School of India University (NLSIU), Bengaluru</span>, I'm contributing to the international project "Cooling the City" funded by the University of Toronto. I'm also co-founder of <span className="text-cyan font-semibold">GeoCatalog</span>, where I provide research consultancy to PhD scholars and conduct geospatial training programs.
+                </p>
+                <p className="text-base sm:text-lg text-cyan italic font-medium mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-cyan/20">
+                  "Never Ever Settle, Eager to learn, perform and research."
+                </p>
+              </div>
+
+              {/* Research Interests */}
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Research Interests</h3>
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+                {researchInterests.map((area, idx) => (
+                  <div key={idx} className="card fade-in">
+                    <h4 className="text-xl font-bold text-cyan mb-4">{area.title}</h4>
+                    <ul className="space-y-2">
+                      {area.topics.map((topic, i) => (
+                        <li key={i} className="flex items-start gap-2 text-gray-300">
+                          <span className="text-cyan mt-1">▹</span>
+                          <span>{topic}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Publications Section */}
+          <section id="section-publications" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-dark-lighter/30">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6 mb-8 sm:mb-12">
+                <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+                  Publications & Research
+                </h2>
+                <div className="flex gap-3 sm:gap-4 flex-shrink-0">
+                  <div className="stat-card flex-1 sm:flex-initial min-w-0">
+                    <div className="stat-value">{publications.length}</div>
+                    <div className="text-xs sm:text-sm text-gray-400 mt-1">Papers</div>
+                  </div>
+                  <div className="stat-card flex-1 sm:flex-initial min-w-0">
+                    <div className="stat-value">{citationData.googleScholar.citations}</div>
+                    <div className="text-xs sm:text-sm text-gray-400 mt-1">Citations</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="timeline">
+                {publications.map((pub, idx) => (
+                  <div key={idx} className="timeline-item">
+                    <div className="card">
+                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 mb-3">
+                        <h3 className="text-lg sm:text-xl font-semibold text-white flex-1 min-w-0 break-words">{pub.title}</h3>
+                        <span className="tag font-mono flex-shrink-0 self-start">{pub.year}</span>
+                      </div>
+                      <p className="text-cyan font-medium mb-3">{pub.journal}</p>
+                      {pub.doi && (
+                        <a
+                          href={`https://doi.org/${pub.doi}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-gray-400 hover:text-cyan transition-colors break-all"
+                        >
+                          DOI: {pub.doi}
+                        </a>
+                      )}
+                      {pub.doiLink && (
+                        <a
+                          href={pub.doiLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-gray-400 hover:text-cyan transition-colors"
+                        >
+                          View Publication →
+                        </a>
+                      )}
+                      {pub.status && (
+                        <div className="mt-3">
+                          <span className="inline-block px-3 py-1 bg-yellow-500/10 text-yellow-500 rounded-md text-sm font-medium border border-yellow-500/20">
+                            {pub.status}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Journal Positions */}
+              <div className="mt-12 sm:mt-16">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Journal Positions</h3>
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                  {journalPositions.map((pos, idx) => (
+                    <div key={idx} className="card">
+                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4">
+                        <div className="min-w-0">
+                          <h4 className="text-lg sm:text-xl font-semibold text-cyan mb-2">{pos.title}</h4>
+                          {pos.link ? (
+                            <a
+                              href={pos.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-gray-300 hover:text-cyan transition-colors"
+                            >
+                              {pos.journal} →
+                            </a>
+                          ) : (
+                            <p className="text-gray-300">{pos.journal}</p>
+                          )}
+                        </div>
+                        <span className="text-xs sm:text-sm text-gray-400 whitespace-nowrap flex-shrink-0">{pos.period}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Experience Section */}
+          <section id="section-experience" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 sm:mb-12">
+                Professional Experience
+              </h2>
+
+              <div className="timeline">
+                {experience.map((exp, idx) => (
+                  <div key={idx} className="timeline-item">
+                    <div className="card">
+                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 mb-4">
+                        <div className="min-w-0">
+                          <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 break-words">{exp.role}</h3>
+                          <p className="text-cyan font-medium text-sm sm:text-base break-words">{exp.org}</p>
+                        </div>
+                        <span className="tag font-mono whitespace-nowrap flex-shrink-0 self-start">{exp.period}</span>
+                      </div>
+                      {exp.project && (
+                        <div className="mb-4 p-3 sm:p-4 bg-cyan/10 border-l-4 border-cyan rounded-r overflow-hidden">
+                          <p className="text-sm text-gray-300 break-words">
+                            <span className="font-semibold text-cyan">Project:</span> {exp.project}
+                          </p>
+                        </div>
+                      )}
+                      <ul className="space-y-3">
+                        {exp.details.map((detail, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <span className="text-cyan mt-1">▹</span>
+                            <span className="text-gray-300">{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Education Section */}
+          <section id="section-education" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-dark-lighter/30">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 sm:mb-12">
+                Education & Certifications
+              </h2>
+
+              <div className="mb-10 sm:mb-16">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Academic Background</h3>
+                <div className="timeline">
+                  {education.map((edu, idx) => (
+                    <div key={idx} className="timeline-item">
+                      <div className="card">
+                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 mb-4">
+                          <div className="min-w-0">
+                            <h4 className="text-xl sm:text-2xl font-bold text-white mb-2 break-words">{edu.degree}</h4>
+                            <p className="text-cyan font-medium text-sm sm:text-base break-words">{edu.institution}</p>
+                          </div>
+                          <span className="tag font-mono whitespace-nowrap flex-shrink-0 self-start">{edu.period}</span>
+                        </div>
+                        <div className="mb-3">
+                          <span className="inline-block px-3 py-1 bg-cyan/10 text-cyan rounded-md text-sm font-medium border border-cyan/20">
+                            Grade: {edu.grade}
+                          </span>
+                        </div>
+                        {edu.expertise && (
+                          <p className="text-sm text-cyan mb-3">
+                            <span className="font-semibold">Expertise:</span> {edu.expertise}
+                          </p>
+                        )}
+                        <p className="text-gray-300 leading-relaxed">{edu.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Certifications</h3>
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                  {certifications.map((cert, idx) => (
+                    <div key={idx} className="card">
+                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-4 mb-3">
+                        <h4 className="text-base sm:text-lg font-semibold text-white break-words">{cert.title}</h4>
+                        <span className="text-xs sm:text-sm text-gray-400 whitespace-nowrap flex-shrink-0">{cert.date}</span>
+                      </div>
+                      <p className="text-cyan font-medium mb-3 text-sm sm:text-base">{cert.institution}</p>
+                      <p className="text-sm text-gray-300">{cert.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Skills Section */}
+          <section id="section-skills" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 sm:mb-12">
+                Technical Expertise
+              </h2>
+
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                {skills.map((skillSet, idx) => (
+                  <div key={idx} className="card">
+                    <h3 className="text-xl sm:text-2xl font-bold text-cyan mb-4 sm:mb-6">{skillSet.category}</h3>
+                    <ul className="space-y-4">
+                      {skillSet.tools.map((tool, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <span className="text-cyan mt-1">▹</span>
+                          <span className="text-gray-300">{tool}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Contact Section */}
+          <section id="section-contact" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-dark-lighter/30">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-8 sm:mb-12">
+                <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
+                  Let's Work Together
+                </h2>
+                <p className="text-base sm:text-xl text-gray-400 px-2">
+                  Have a project in mind? Let's discuss how GeoAI can solve your challenges.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
+                <div className="card">
+                  <h3 className="text-xl font-bold text-cyan mb-4">Contact Information</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <p className="text-sm text-gray-400 mb-1">Email</p>
+                      <a href={`mailto:${profile.email}`} className="text-gray-300 hover:text-cyan transition-colors">
+                        {profile.email}
+                      </a>
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-400 mb-1">Phone</p>
+                      <a href={`tel:${profile.phone}`} className="text-gray-300 hover:text-cyan transition-colors">
+                        {profile.phone}
+                      </a>
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-400 mb-1">Location</p>
+                      <p className="text-gray-300">Jaipur, Rajasthan, India</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="card">
+                  <h3 className="text-xl font-bold text-cyan mb-4">Connect with Me</h3>
+                  <div className="flex flex-wrap gap-3">
+                    <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" className="social-link">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                      </svg>
+                    </a>
+                    <a href={profile.links.scholar} target="_blank" rel="noopener noreferrer" className="social-link">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
+                      </svg>
+                    </a>
+                    <a href={profile.links.researchgate} target="_blank" rel="noopener noreferrer" className="social-link">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.894 8.221l-1.97-.345-.346-1.971a.3.3 0 0 0-.57 0l-.346 1.97-1.971.346a.3.3 0 0 0 0 .57l1.97.346.346 1.971a.3.3 0 0 0 .57 0l.346-1.97 1.971-.346a.3.3 0 0 0 0-.57z" />
+                      </svg>
+                    </a>
+                    <a href={profile.links.orcid} target="_blank" rel="noopener noreferrer" className="social-link">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm5.568 8.16c-.169 0-.349.018-.54.054v8.348c.191.036.371.054.54.054 1.897 0 3.432-1.533 3.432-3.432 0-1.897-1.535-3.432-3.432-3.432zm-11.136 0c-1.897 0-3.432 1.535-3.432 3.432 0 1.899 1.535 3.432 3.432 3.432.169 0 .349-.018.54-.054V8.214c-.191-.036-.371-.054-.54-.054zm5.568 0c-.74 0-1.44.156-2.058.432v7.136c.618.276 1.318.432 2.058.432 1.897 0 3.432-1.533 3.432-3.432 0-1.899-1.535-3.432-3.432-3.432z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact Form */}
+              <div className="card">
+                <h3 className="text-2xl font-bold text-cyan mb-6">Send a Message</h3>
+                <form onSubmit={handleFormSubmit} className="space-y-4 sm:space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
+                        Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleFormChange}
+                        required
+                        placeholder="Your Name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleFormChange}
+                        required
+                        placeholder="your.email@example.com"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-400 mb-2">
+                      Subject *
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleFormChange}
+                      required
+                      placeholder="Message Subject"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleFormChange}
+                      required
+                      rows="6"
+                      placeholder="Your message here..."
+                    />
+                  </div>
+
+                  {formStatus.message && (
+                    <div className={`p-4 rounded-lg border ${formStatus.success
+                        ? 'bg-green-500/10 border-green-500/30 text-green-400'
+                        : formStatus.error
+                          ? 'bg-red-500/10 border-red-500/30 text-red-400'
+                          : 'bg-cyan/10 border-cyan/30 text-cyan'
+                      }`}>
+                      {formStatus.message}
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={formStatus.submitting}
+                    className="btn-primary w-full flex items-center justify-center gap-2"
+                  >
+                    {formStatus.submitting ? (
+                      <>
+                        <div className="loading-spinner"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </>
+                    )}
+                  </button>
+                </form>
+              </div>
+            </div>
+          </section>
+          </main>
+
+          {/* Footer */}
+          <footer className="py-8 sm:py-12 px-4 sm:px-6 border-t border-cyan/10" role="contentinfo">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+                <div>
+                  <p className="text-sm sm:text-base text-gray-400">
+                    © {new Date().getFullYear()} {profile.name}. All rights reserved.
+                  </p>
+                  <p className="text-xs sm:text-sm text-gray-500 mt-1">
+                    GeoAI Specialist & Remote Sensing Expert
+                  </p>
+                </div>
+                <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+                  <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan transition-colors">
+                    LinkedIn
+                  </a>
+                  <a href={profile.links.scholar} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan transition-colors">
+                    Scholar
+                  </a>
+                  <a href={profile.links.researchgate} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan transition-colors">
+                    ResearchGate
+                  </a>
+                  <a href={profile.links.orcid} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan transition-colors">
+                    ORCID
+                  </a>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<Portfolio />, document.getElementById("root"));
+  </script>
+</body>
+
+</html>
