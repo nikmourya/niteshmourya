@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nitesh Kumar Mourya | GeoAI Specialist &amp; Remote Sensing Expert</title>
-  <meta name="description" content="GeoAI Specialist and Remote Sensing Expert. Research Assistant at NLSIU Bengaluru. Expertise in GIS, Google Earth Engine, machine learning for spatial analytics. 6+ publications, 93+ citations." />
-  <meta name="keywords" content="GeoAI, Remote Sensing, GIS, Geospatial Analysis, Earth Observation, Machine Learning, Google Earth Engine, ArcGIS, QGIS, LULC, Nitesh Kumar Mourya" />
-  <meta name="author" content="Nitesh Kumar Mourya" />
+  <title>Portfolio</title>
+  <meta name="description" content="Portfolio" />
+  <meta name="keywords" content="portfolio" />
+  <meta name="author" content="" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0a0e1a" />
   <!-- Update href with your actual portfolio URL when deployed -->
@@ -20,45 +20,19 @@
   <link rel="manifest" href="./assets/site.webmanifest" />
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://niteshmourya.github.io/" />
-  <meta property="og:title" content="Nitesh Kumar Mourya | GeoAI Specialist &amp; Remote Sensing Expert" />
-  <meta property="og:description" content="GeoAI Specialist and Remote Sensing Expert. Research at NLSIU Bengaluru. Expertise in GIS, Earth Engine, machine learning for spatial analytics. 6+ publications." />
-  <meta property="og:image" content="https://niteshmourya.github.io/assets/Photo.jpg" />
-  <meta property="og:site_name" content="Nitesh Kumar Mourya - GeoAI Portfolio" />
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="Portfolio" />
+  <meta property="og:description" content="Portfolio" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
   <meta property="og:locale" content="en_IN" />
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Nitesh Kumar Mourya | GeoAI Specialist &amp; Remote Sensing Expert" />
-  <meta name="twitter:description" content="GeoAI Specialist and Remote Sensing Expert. Expertise in GIS, Earth Engine, machine learning for spatial analytics. 6+ publications, 93+ citations." />
-  <meta name="twitter:image" content="https://niteshmourya.github.io/assets/Photo.jpg" />
+  <meta name="twitter:title" content="Portfolio" />
+  <meta name="twitter:description" content="Portfolio" />
+  <meta name="twitter:image" content="" />
   <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Nitesh Kumar Mourya",
-    "jobTitle": "GeoAI Specialist & Remote Sensing Expert",
-    "description": "GeoAI Specialist with expertise in geospatial analysis, GIS, and machine learning for spatial analytics. Research Assistant at National Law School of India University.",
-    "url": "https://niteshmourya.github.io/",
-    "image": "https://niteshmourya.github.io/assets/Photo.jpg",
-    "email": "nik.gee.code@gmail.com",
-    "sameAs": [
-      "https://www.linkedin.com/in/nitesh-kumar-mourya-775497216/",
-      "https://scholar.google.com/citations?user=N2YS5d0AAAAJ",
-      "https://www.researchgate.net/profile/Nitesh-Mourya-7",
-      "https://orcid.org/0000-0001-6391-9936"
-    ],
-    "knowsAbout": ["GeoAI", "Remote Sensing", "GIS", "Geospatial Analysis", "Machine Learning", "Google Earth Engine", "ArcGIS", "LULC Classification"],
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Maharshi Dayanand Saraswati University, Ajmer"
-    },
-    "worksFor": {
-      "@type": "Organization",
-      "name": "National Law School of India University"
-    }
-  }
-  </script>
+  <script id="person-jsonld" type="application/ld+json">{}</script>
   <link rel="preload" href="./assets/Photo.jpg" as="image" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -519,6 +493,33 @@
       box-shadow: 0 8px 20px rgba(34, 211, 238, 0.2);
     }
 
+    /* WhatsApp floating action button */
+    .whatsapp-fab {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(37, 211, 102, 0.15);
+      border: 1px solid rgba(37, 211, 102, 0.35);
+      color: #25D366;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      transition: all 0.2s ease;
+      z-index: 60;
+      backdrop-filter: blur(14px);
+    }
+
+    .whatsapp-fab:hover {
+      transform: translateY(-3px);
+      background: rgba(37, 211, 102, 0.22);
+      border-color: rgba(37, 211, 102, 0.6);
+      box-shadow: 0 18px 45px rgba(37, 211, 102, 0.18);
+    }
+
     /* Profile Image */
     .profile-image {
       width: 340px;
@@ -757,6 +758,103 @@
   <script type="text/babel">
     const { useState, useEffect, useRef } = React;
 
+    const DEFAULT_CITATION_DATA = {
+      googleScholar: { citations: 0, hIndex: 0, i10Index: 0 },
+      researchGate: { reads: 0, citations: 0, recommendations: 0 },
+    };
+
+    function mergeCitationData(incoming) {
+      const gs = (incoming && incoming.googleScholar) || {};
+      const rg = (incoming && incoming.researchGate) || {};
+      return {
+        googleScholar: {
+          citations: Number.isFinite(gs.citations) ? gs.citations : DEFAULT_CITATION_DATA.googleScholar.citations,
+          hIndex: Number.isFinite(gs.hIndex) ? gs.hIndex : DEFAULT_CITATION_DATA.googleScholar.hIndex,
+          i10Index: Number.isFinite(gs.i10Index) ? gs.i10Index : DEFAULT_CITATION_DATA.googleScholar.i10Index,
+        },
+        researchGate: {
+          reads: Number.isFinite(rg.reads) ? rg.reads : DEFAULT_CITATION_DATA.researchGate.reads,
+          citations: Number.isFinite(rg.citations) ? rg.citations : DEFAULT_CITATION_DATA.researchGate.citations,
+          recommendations: Number.isFinite(rg.recommendations) ? rg.recommendations : DEFAULT_CITATION_DATA.researchGate.recommendations,
+        },
+      };
+    }
+
+    function getShortName(fullName) {
+      if (!fullName) return "";
+      const parts = String(fullName).trim().split(/\s+/).filter(Boolean);
+      if (parts.length === 1) return parts[0];
+      const last = parts[parts.length - 1];
+      const firstInitial = parts[0][0] ? parts[0][0].toUpperCase() + "." : "";
+      const secondInitial = parts.length > 2 && parts[1][0] ? parts[1][0].toUpperCase() + "." : "";
+      const initials = `${firstInitial}${secondInitial}`.trim();
+      return initials ? `${initials} ${last}` : last;
+    }
+
+    function setMetaBySelector(selector, content) {
+      const el = document.querySelector(selector);
+      if (!el) return;
+      if (content === undefined || content === null || content === "") return;
+      el.setAttribute("content", String(content));
+    }
+
+    function setLinkHref(selector, href) {
+      const el = document.querySelector(selector);
+      if (!el) return;
+      if (href === undefined || href === null || href === "") return;
+      el.setAttribute("href", String(href));
+    }
+
+    function applySiteMeta(data) {
+      const profile = (data && data.profile) || {};
+      const site = (data && data.site) || {};
+
+      const title = site.title || [profile.name, profile.title].filter(Boolean).join(" | ") || "Portfolio";
+      document.title = title;
+
+      setMetaBySelector('meta[name="description"]', site.description);
+      setMetaBySelector('meta[name="keywords"]', site.keywords);
+      setMetaBySelector('meta[name="author"]', profile.name || site.author);
+
+      setLinkHref('link[rel="canonical"]', site.canonical);
+
+      setMetaBySelector('meta[property="og:url"]', site.canonical);
+      setMetaBySelector('meta[property="og:title"]', title);
+      setMetaBySelector('meta[property="og:description"]', site.description);
+      setMetaBySelector('meta[property="og:image"]', site.ogImage);
+      setMetaBySelector('meta[property="og:site_name"]', site.siteName);
+
+      setMetaBySelector('meta[name="twitter:title"]', title);
+      setMetaBySelector('meta[name="twitter:description"]', site.description);
+      setMetaBySelector('meta[name="twitter:image"]', site.ogImage);
+
+      const jsonld = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: profile.name || undefined,
+        jobTitle: profile.title || undefined,
+        url: site.canonical || undefined,
+        image: site.ogImage || profile.photo || undefined,
+        email: profile.email || undefined,
+        address: profile.location || undefined,
+        sameAs: profile.links ? Object.values(profile.links).filter(Boolean) : undefined,
+      };
+      const jsonldEl = document.getElementById("person-jsonld");
+      if (jsonldEl) jsonldEl.textContent = JSON.stringify(jsonld, null, 2);
+    }
+
+    function digitsOnly(value) {
+      return String(value || "").replace(/\D/g, "");
+    }
+
+    function getWhatsAppLink(phone, message) {
+      const digits = digitsOnly(phone);
+      if (!digits) return null;
+      const base = `https://wa.me/${digits}`;
+      const text = (message || "").trim();
+      return text ? `${base}?text=${encodeURIComponent(text)}` : base;
+    }
+
     function Portfolio() {
       const [activeSection, setActiveSection] = useState("home");
       const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -776,10 +874,7 @@
 
       const [portfolioData, setPortfolioData] = useState(null);
       const [loadError, setLoadError] = useState(null);
-      const [citationData, setCitationData] = useState({
-        googleScholar: { citations: 93, hIndex: 3, i10Index: 2 },
-        researchGate: { reads: 0, citations: 0, recommendations: 0 },
-      });
+      const [citationData, setCitationData] = useState(DEFAULT_CITATION_DATA);
       const [publications, setPublications] = useState([]);
       const [experience, setExperience] = useState([]);
       const [journalPositions, setJournalPositions] = useState([]);
@@ -790,12 +885,11 @@
       const [profile, setProfile] = useState(null);
       const [researchInterests, setResearchInterests] = useState([]);
 
-      // Load portfolio data from JSON file (falls back to inline if local)
-      const INLINE_DATA = {"citationData":{"googleScholar":{"citations":93,"hIndex":3,"i10Index":2},"researchGate":{"reads":0,"citations":0,"recommendations":0}},"publications":[{"title":"Monitoring Wetland Hydrology and Surface Water Transformation in Jaipur Urban Ecosystem using GeoAI","journal":"GeoJournal","status":"Under Review","year":2026},{"title":"Finding robust model for Urban Growth Prediction based on Land Use Land Cover Classification: A comparative study of CA Markov and Molusce models","journal":"Geography and Regional Future Studies","status":"Accepted","year":2026},{"title":"Evaluation of Shoreline Alteration Along the Jagatsinghpur District Coast, India (1990-2020)","journal":"Ocean and Coastal Management (ELSEVIER)","doi":"10.1016/j.ocecoaman.2024.107132","year":2024},{"title":"Assessment of Chemicals Hazard and Resilience in an Educational Setup: A case study of Jamia Millia Islamia University, India","journal":"Indian Journal of Environmental Protection","doiLink":"https://www.e-ijep.co.in/44-4-340-351/","doiText":"44-4-340-351","year":2024},{"title":"Forest carbon sequestration mapping and economic quantification in Askot Wildlife Sanctuary","journal":"Ecological Informatics (ELSEVIER)","doi":"10.1016/j.ecoinf.2023.102428","year":2023},{"title":"Land Use/Land Cover Dynamics Study and Prediction In Jaipur City using CA Markov Model","journal":"GeoJournal (Springer)","doi":"10.1007/s10708-022-10593-9","year":2022}],"experience":[{"role":"Research Internship","org":"MSME PPDC AGRA","period":"25 Nov 2025 - 25 Dec 2025","details":["Completed specialized online training on research methodologies and online internship frameworks","Gained practical skills in structured research processes, virtual collaboration tools, and internship project management","Applied insights to enhance GeoAI models for urban environmental analysis and remote sensing workflows"]},{"role":"Research Assistant (Geospatial Analysis)","org":"National Law School of India University (NLSIU), Bengaluru","period":"June 2025 - Present","project":"Cooling the City: Assessing the Impact of Green and Blue Spaces on Urban Heat Islands for Evidence-Based Urban Policy and Planning in Jaipur and Bengaluru (Funded by University of Toronto)","details":["Conducting geospatial analysis for the international project on urban cooling","Responsible for evaluation and mapping of geospatial datasets pertaining to green and blue spaces and urban heat islands across selected urban areas","Expertise in spatial analysis, remote sensing applications for urban climate modelling, and evidence-based policy support through advanced GIS techniques"]},{"role":"Assistant Professor of GIS and Remote Sensing","org":"GEOTECH GIS Training Institute & Consultancy Services","period":"August 2023 - September 2024","details":["Teaching GIS and Remote Sensing courses","Guiding PhD scholars in geospatial research","Project Assistant at Flyview GIS Technology Pvt. Ltd. (Part of GeoTech)"]},{"role":"GIS-Faculty / Analyst (Part-time)","org":"GeoCatalog - Institute of Geoinformatics and Research","period":"June 2021 - Present","details":["GIS-Analyst providing PhD consultancy in GIS and Remote Sensing earth observation related science","Teaching and conducting revenue mapping projects","Research consultancy services for doctoral scholars"]},{"role":"GIS-Faculty","org":"Swastik Edustart","period":"February 2022 - July 2023","details":["Teaching GIS and Remote Sensing courses","Assisting PhD scholars with GIS-RS techniques research application","Expertise in generating highly accurate Land Use Land Cover with different models and algorithms, change analysis, and prediction"]},{"role":"Internship (Corporate)","org":"Tech Culture, New Delhi","period":"August 2020 - January 2021","details":["Digitizing building footprint and correcting available vector data","Quality control and spatial data management"]}],"journalPositions":[{"title":"Reviewer","journal":"GeoJournal (Springer)","link":"https://link.springer.com/journal/10708","period":"January 2024 - Present"},{"title":"Reviewer","journal":"Open Journal of Geology (OJG)","period":"May 2024 - Present"}],"workshops":[{"title":"Poster and Presentation Competition - National Space Day","date":"23 August 2025","org":"Department of Remote Sensing & Geoinformatics, MDSU, Ajmer","achievement":"Secured Second Position in both categories","papers":["Research Poster: Habitat Dynamics and Biodiversity Assessment in Rajaji National Park (1994-2024) Using GeoAI Model","Presentation: Applications of Remote Sensing and Geospatial Technologies for Achieving SDGs"]},{"title":"Symposium on Conservation of Wetlands","date":"3 February 2025","org":"Department of Environmental Science & Department of Remote Sensing and Geoinformatics, MDSU, Ajmer","papers":["Comparative Analysis of Sentinel-2 and Landsat-8 for Wetland and Drought Monitoring Using NDWI and MNDWI","Impact of Urbanization on Wetlands in Jaipur: A Spatiotemporal Analysis Using NDWI, MNDWI, and SVM-Based Prediction (GeoAI Model)"]},{"title":"LANDSLIDE RISK ASSESSMENT AND MITIGATION IN INDIA","date":"1-2 November 2022","org":"Department of Geography, Jamia Millia Islamia, New Delhi","papers":["AHP integrated GIS based Landslide Susceptibility Mapping in the Garhwal Himalayan Region of India"]},{"title":"Building Urban Resilience through Advanced Technology","date":"January 2022","org":"Amity University and National Disaster Management","description":"Learned about building urban resilience and developing urban green space, improving urban environment"},{"title":"5th World Congress on Disaster Management","date":"24-27 November 2021","org":"Indian Institute of Technology, Delhi","papers":["Assessment of Chemicals Hazard and Resilience in an Educational Setup: A case study of Jamia Millia Islamia University, India"]},{"title":"Earth Resources Management in Current Scenario","date":"5 September 2020","org":"Suresh Gyan Vihar University","description":"One Day Virtual Symposium"},{"title":"Implication of Covid-19 on Sustainable Development","date":"27-28 June 2020","org":"International Geography Union (IGU) - INDIA","papers":["Urban Growth Prediction Using Geospatial Techniques: A Case Study of Jaipur, Rajasthan, India"]},{"title":"The Science of Places: Exploring Career Goals and Competencies","date":"31 May 2020","org":"School of Basic and Applied Sciences & Department of Geography, Adam University","description":"Webinar on future geographers"},{"title":"Future cities, Sustainable Development and Geospatial Technologies","date":"24 May 2020","org":"Department of Studies and Research in Geography, Rani Channamma University, Karnataka","papers":["Spatio-Temporal Analysis of Shoreline Change Along Jagatsinghpur"]},{"title":"Urban Health Hazard and Preparedness in Global Pandemic COVID-19","date":"2 May 2020","org":"Department of Geography, Shaheed Bhagat Singh College, University of Delhi"}],"skills":[{"category":"GIS & Spatial Analysis","tools":["ESRI ArcGIS Desktop – Vector and raster data creation, spatial analysis, choropleth mapping, network analysis, interpolation, and hydrological modeling.","ArcGIS Pro – Advanced vector/raster workflows, geoprocessing automation, spatial modeling, and 3D analysis capabilities.","QGIS – Vector/raster data management, spatial analysis, geoprocessing tools, proximity analysis, overlay operations, terrain analysis, and multi-format data integration.","Global Mapper – High-precision digitization, spatial analysis, and multi-format data conversion for GIS workflows."]},{"category":"Image Processing & Classification","tools":["ERDAS Imagine – Digital image preprocessing (radiometric and atmospheric correction, image enhancement), geometric correction and orthorectification, supervised and unsupervised classification, accuracy assessment (achieving up to 0.97 Kappa accuracy in LULC mapping), and multi-temporal change detection.","ArcGIS Pro – AI-based supervised image classification using machine learning algorithms (SVM, Random Tree, Random Forest) with integrated accuracy assessment and validation.","QGIS – Semi-automatic LULC classification using SCP (Semi-Automatic Classification Plugin), LULC change detection, and future land use prediction using the MOLUSCE plugin.","Google Earth Engine – Cloud-based LULC mapping, AI-based classification (SVM, Random Forest), SAR data processing, wetland change detection, GeoAI modeling for biodiversity and ecosystem, and GeoAI modeling for Park Cooling Parameters.","IDRISI SELVA & TerrSet – LULC map generation, change analysis, and future LULC prediction using the LCM model, Biodiversity Analysis."]},{"category":"GeoAI Modeling","tools":["Green and Blue Space Cooling Analysis – GeoAI-based XGBoost model: Park Cooling Distance or Lmax (Gradient and Decay Method), Park Cooling Contribution, Park Cooling Area, Cooling Gradient, Cooling Efficiency.","Biodiversity and Ecosystem Analysis – GeoAI-based Random Forest modeling.","LULC Modeling – Support Vector Machine, XGBoost, Random Forest, and Random Tree on GEE and ArcGIS Pro."]},{"category":"Programming & Development","tools":["Python - Geodata processing and spatial analysis","JavaScript - Google Earth Engine scripting","HTML - Web development","C - Programming fundamentals"]},{"category":"Additional Tools","tools":["AutoCAD - 2D data drawing","Geo-Server - Web-based vector/raster data sharing","MS Office - Word, Excel, PowerPoint","Computer Hardware - Assembling, troubleshooting, and maintenance"]}],"education":[{"degree":"M.Sc. (Remote Sensing and Geoinformatics)","institution":"Maharshi Dayanand Saraswati University, Ajmer","period":"October 2024 - Present (3rd Semester)","grade":"1st Semester: 77%, and 2nd Semester: 78%","description":"Built foundation in satellite remote sensing, GIS, geodesy, GPS, and digital cartography. Expanded into thermal, microwave, and hyperspectral remote sensing, aerial photography, photogrammetry, digital image classification (including ANN and fuzzy methods). Practical work included image processing, map preparation, and seminar presentations. Presented research posters at departmental competitions and national conferences.","expertise":"GeoAI Integration in Spatial Analysis, Remote Sensing, GeoAI modeling on GEE, Python and JavaScript"},{"degree":"M.A./M.Sc. (Geography)","institution":"Amer Maharaja P.G. College, University of Rajasthan","period":"June 2017 - December 2020","grade":"55.7%","description":"Studied Advanced Geography of India, Geomorphology, Climatology, and Oceanography. Developed theoretical knowledge in research methodology and practical skills in map interpretation, surveying, cartography, GIS, Remote Sensing, and quantitative techniques.","expertise":"Physical Geography"},{"degree":"B.A. (Geography, History, Political Science)","institution":"Amer Maharaja P.G. College, University of Rajasthan","period":"June 2017 - August 2020","grade":"50% (Geography: 58.5%)","description":"Multidisciplinary foundation covering Physical Geography (Geomorphology, Climatology, Oceanography), Human Geography, and Geography of India and Rajasthan. Practical work included map interpretation, topographical analysis, field surveys, and report writing."},{"degree":"Senior Secondary (Geography, History, Political Science)","institution":"Board of Secondary Education, Rajasthan","period":"May 2014","grade":"64% (Geography: 79%)","description":"Learned basics of Physical Geography, Human Geography, and introduction to Remote Sensing and Aerial Photography."}],"certifications":[{"title":"Automated Feature Extraction from High Resolution Images","institution":"Indian Institute of Remote Sensing (ISRO) - Distance Learning","date":"29 December 2023","description":"Image feature identification and extraction, pixel/sub-pixel/object-based information extraction, machine learning and deep learning applications"},{"title":"SAR Data Processing & Applications with RISAT-1A/EOS","institution":"Indian Institute of Remote Sensing (ISRO) - Distance Learning","date":"1 May 2023","description":"SAR data and its applications in spatial conditions such as disaster studies"},{"title":"Geodata Processing using Python","institution":"Indian Institute of Remote Sensing (ISRO) - Distance Learning","date":"15 January 2023","description":"Basic Python and Python programming language in geodata processing"},{"title":"Diploma in GIS and Remote Sensing","institution":"Swastik Edustart (ITTEC)","date":"June 2020","description":"Comprehensive training in GIS and Remote Sensing, paper presentations at international and national conferences"},{"title":"DCA (Diploma in Computer Application)","institution":"DOS Computer Information Technology, Jaipur","date":"August 2012","description":"Computer applications and fundamentals"},{"title":"Computer Hardware Diploma","institution":"Statisworld Education","date":"October 2012","description":"Computer hardware assembling, troubleshooting, and hardware replacement"}],"profile":{"name":"Nitesh Kumar Mourya","title":"GeoAI Specialist & Remote Sensing Expert","location":"89, Sadbhawana Nagar, Nangal Susawatan, Amer, Jaipur, Rajasthan, India","phone":"+91 8740970764","email":"nik.gee.code@gmail.com","dob":"23 May 1997","fatherName":"Jai Narayan Raigar","motherName":"Sahayata Devi","maritalStatus":"Married","nationality":"Indian","languages":"Hindi (Native), English (Professional Efficiency)","hobbies":["Geospatial data analysis and visualization","Research paper writing and academic publishing","Coding and scripting for spatial analysis","Exploring new GeoAI techniques and methodologies","Reading scientific literature on remote sensing and urban geography"],"links":{"linkedin":"https://www.linkedin.com/in/nitesh-kumar-mourya-775497216/","scholar":"https://scholar.google.com/citations?user=N2YS5d0AAAAJ&hl=en","researchgate":"https://www.researchgate.net/profile/Nitesh-Mourya-7","orcid":"https://orcid.org/0000-0001-6391-9936"}},"researchInterests":[{"title":"Geoinformatics and GeoAI","topics":["Application of machine learning and deep learning in Earth Observation","LULC classification using multi-source satellite data","SAR-based flood and hazard assessment","GeoAI-driven spatial decision support systems"]},{"title":"Himalayan Ecosystem & Glaciology","topics":["Mountain ecosystems and climate sensitivity","Glacier dynamics and GLOF risks","Cryosphere monitoring with optical/SAR data"]},{"title":"Urban Geography & Climate","topics":["Urban Heat Island assessment","Urban expansion patterns","Climate change in cities"]}]};
-
       function applyData(d) {
+        setLoadError(null);
         setPortfolioData(d);
-        setCitationData(d.citationData || citationData);
+        applySiteMeta(d);
+        setCitationData(mergeCitationData(d.citationData));
         setPublications(d.publications || []);
         setExperience(d.experience || []);
         setJournalPositions(d.journalPositions || []);
@@ -808,10 +902,15 @@
       }
 
       useEffect(() => {
-        fetch('./portfolio-data.json')
+        fetch('./portfolio-data.json', { cache: 'no-store' })
           .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
           .then(applyData)
-          .catch(() => applyData(INLINE_DATA));
+          .catch((err) => {
+            console.error("Failed to load portfolio-data.json:", err);
+            setLoadError(
+              "Couldn't load portfolio-data.json. If you're opening index.html directly, most browsers block fetch() for local files. Please run this folder with a local web server (e.g., VS Code Live Server) so JSON can be loaded."
+            );
+          });
       }, []);
 
       // Scroll handler
@@ -903,7 +1002,6 @@
         return (
           <div className="min-h-screen flex items-center justify-center px-4">
             <div className="card text-center max-w-md">
-              <div className="text-4xl mb-4">⚠️</div>
               <h2 className="text-xl font-bold text-cyan mb-2">Failed to Load Portfolio Data</h2>
               <p className="text-gray-400 text-sm mb-4">{loadError}</p>
               <p className="text-gray-500 text-xs">Make sure <code className="text-cyan">portfolio-data.json</code> is in the same directory as <code className="text-cyan">index.html</code>.</p>
@@ -943,9 +1041,9 @@
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full flex items-center justify-center">
-                    <img src="./assets/Photo.jpg" alt="Nitesh Kumar Mourya - GeoAI Specialist" className="w-full h-full object-cover rounded-full" />
+                    <img src={profile.photo || "./assets/Photo.jpg"} alt={`${profile.name} - ${profile.title}`} className="w-full h-full object-cover rounded-full" />
                   </div>
-                  <span className="text-xl font-bold text-cyan hidden sm:block">N.K. Mourya</span>
+                  <span className="text-xl font-bold text-cyan hidden sm:block">{getShortName(profile.name)}</span>
                 </div>
 
                 {/* Desktop Menu */}
@@ -955,8 +1053,8 @@
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
                       className={`text-sm font-medium transition-all ${activeSection === item.id
-                          ? 'text-cyan'
-                          : 'text-gray-400 hover:text-cyan'
+                        ? 'text-cyan'
+                        : 'text-gray-400 hover:text-cyan'
                         }`}
                     >
                       {item.label}
@@ -1004,523 +1102,530 @@
 
           {/* Hero Section */}
           <main id="main-content" role="main">
-          <section className="hero-section pt-16 sm:pt-20" aria-label="Introduction">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-              <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                <div className="fade-in">
-                  <div className="inline-block mb-4 px-4 py-2 bg-cyan/10 border border-cyan/30 rounded-full">
-                    <span className="text-cyan text-sm font-mono">👋 Available for Consulting</span>
-                  </div>
-                  <h1 className="hero-title">
-                    Turning Earth Observation Data into{' '}
-                    <span className="text-cyan">Intelligent Insights</span>
-                  </h1>
-                  {/* GeoAI Slogans as subtitle */}
-                  <div className="space-y-3 mb-4">
-                    <blockquote className="border-l-2 border-cyan/50 pl-4">
-                      <p className="text-base sm:text-lg text-gray-300 italic leading-relaxed">
-                        "The ingenuity of GeoAI and human insight unlocks new ways to understand Earth's features, confront its problems, and design lasting solutions."
-                      </p>
-                    </blockquote>
-                    <blockquote className="border-l-2 border-cyan/30 pl-4">
-                      <p className="text-sm text-gray-400 italic leading-relaxed">
-                        "GeoAI isn't perfect—unless we expertly integrate robust training data, apply continuous knowledge and refinement, and fuel it with imaginative research planning. This powerful collaboration transforms GeoAI into an essential tool for understanding and safeguarding Earth's ecosystems."
-                      </p>
-                    </blockquote>
+            <section className="hero-section pt-16 sm:pt-20" aria-label="Introduction">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                  <div className="fade-in">
+                    <h1 className="hero-title">
+                      <span className="block text-gray-300 text-base sm:text-lg font-medium mb-2">Hello, I’m</span>
+                      <span className="block">{profile.name}</span>
+                      <span className="block text-cyan text-lg sm:text-xl md:text-2xl font-semibold mt-3">{profile.title}</span>
+                    </h1>
+                    {/* GeoAI Slogans as subtitle */}
+                    {Array.isArray(portfolioData?.hero?.slogans) && portfolioData.hero.slogans.length > 0 && (
+                      <div className="space-y-3 mb-4">
+                        {portfolioData.hero.slogans.map((text, i) => (
+                          <blockquote key={i} className={`border-l-2 ${i === 0 ? 'border-cyan/50' : 'border-cyan/30'} pl-4`}>
+                            <p className={`${i === 0 ? 'text-base sm:text-lg text-gray-300' : 'text-sm text-gray-400'} italic leading-relaxed`}>
+                              “{text}”
+                            </p>
+                          </blockquote>
+                        ))}
+                      </div>
+                    )}
+
+                    <div className="flex flex-wrap gap-3 sm:gap-4 mt-6 sm:mt-8">
+                      <button
+                        onClick={() => scrollToSection('contact')}
+                        className="btn-primary flex-1 sm:flex-initial min-w-[120px]"
+                      >
+                        Get in Touch
+                      </button>
+                      {profile?.phone && (
+                        <a
+                          href={getWhatsAppLink(profile.phone, `Hi ${profile.name}, I found your portfolio and would like to connect.`)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-secondary flex-1 sm:flex-initial min-w-[120px] inline-flex items-center justify-center gap-2"
+                          aria-label={`Chat with ${profile.name} on WhatsApp`}
+                        >
+                          <svg className="w-5 h-5" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+                            <path d="M16 3C9.383 3 4 8.383 4 15c0 2.338.675 4.574 1.955 6.5L4 29l7.699-1.897A11.92 11.92 0 0 0 16 27c6.617 0 12-5.383 12-12S22.617 3 16 3zm0 21.818c-1.96 0-3.871-.537-5.528-1.552l-.397-.238-4.57 1.127 1.219-4.45-.259-.414A9.765 9.765 0 0 1 6.235 15c0-5.39 4.375-9.765 9.765-9.765S25.765 9.61 25.765 15 21.39 24.818 16 24.818zm5.68-7.294c-.309-.155-1.83-.902-2.114-1.004-.284-.103-.491-.155-.698.155-.207.309-.803 1.004-.985 1.211-.181.207-.362.232-.671.078-.309-.155-1.305-.481-2.485-1.535-.918-.819-1.538-1.83-1.718-2.14-.181-.309-.02-.476.135-.63.139-.138.309-.362.464-.542.155-.181.207-.31.309-.516.103-.207.052-.387-.026-.542-.077-.155-.698-1.684-.955-2.31-.25-.601-.504-.52-.698-.53l-.595-.01c-.207 0-.542.078-.826.387-.284.31-1.084 1.06-1.084 2.588 0 1.528 1.11 3.006 1.265 3.212.155.207 2.183 3.337 5.288 4.678.739.319 1.315.51 1.764.652.741.236 1.414.203 1.947.123.594-.089 1.83-.749 2.089-1.47.258-.723.258-1.341.181-1.47-.078-.13-.284-.207-.593-.362z" />
+                          </svg>
+                          <span>WhatsApp</span>
+                        </a>
+                      )}
+                    </div>
+
+                    {/* Stats Row */}
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-8 sm:mt-12">
+                      <div className="text-center">
+                        <div className="stat-value">{portfolioData?.hero?.stats?.yearsExperience ?? 0}+</div>
+                        <div className="text-sm text-gray-400 mt-1">Years Exp</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="stat-value">{publications.length}</div>
+                        <div className="text-sm text-gray-400 mt-1">Publications</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="stat-value">{citationData.googleScholar.citations}</div>
+                        <div className="text-sm text-gray-400 mt-1">Citations</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="stat-value">{citationData.googleScholar.hIndex}</div>
+                        <div className="text-sm text-gray-400 mt-1">h-index</div>
+                      </div>
+                    </div>
                   </div>
 
-                  {/* Extended description */}
-                  <p className="text-sm sm:text-base text-gray-400 leading-relaxed mt-4">
-                    Guided by these principles, I specialize in Remote Sensing, GIS, and GeoAI, leveraging advanced platforms like Google Earth Engine, ArcGIS, QGIS, and ERDAS Imagine — converting complex geospatial data into actionable knowledge. My expertise includes land cover classification, satellite image analysis, automated feature extraction, and the integration of AI into environmental and spatial modeling. As co-founder of GeoCatalog, I provide dedicated research consultancy to PhD scholars and support impactful research publications. Additionally, I offer comprehensive geospatial training programs to empower students and researchers with the practical skills needed to address today's environmental and geographic challenges. Through meticulous data refinement and collaborative innovation, I strive to advance geospatial science for sustainable solutions that benefit Earth's ecosystems and society alike.
-                  </p>
-                  <div className="flex flex-wrap gap-3 sm:gap-4 mt-6 sm:mt-8">
-                    <button onClick={() => scrollToSection('contact')} className="btn-primary flex-1 sm:flex-initial min-w-[120px]">
-                      Get in Touch
-                    </button>
-                    <button onClick={() => scrollToSection('publications')} className="btn-secondary flex-1 sm:flex-initial min-w-[120px]">
-                      View Research
-                    </button>
-                  </div>
-
-                  {/* Stats Row */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-8 sm:mt-12">
-                    <div className="text-center">
-                      <div className="stat-value">{experience.length}+</div>
-                      <div className="text-sm text-gray-400 mt-1">Years Exp</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="stat-value">{publications.length}</div>
-                      <div className="text-sm text-gray-400 mt-1">Publications</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="stat-value">{citationData.googleScholar.citations}</div>
-                      <div className="text-sm text-gray-400 mt-1">Citations</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="stat-value">{citationData.googleScholar.hIndex}</div>
-                      <div className="text-sm text-gray-400 mt-1">h-index</div>
+                  <div className="flex justify-center fade-in">
+                    <div className="flex flex-col items-center justify-center gap-6">
+                      <img
+                        src={profile.photo || "./assets/Photo.jpg"}
+                        alt={`${profile.name} - ${profile.title}`}
+                        className="profile-image object-cover"
+                      />
+                      {/* Social Links Around Image */}
+                      <div className="flex items-center justify-center gap-2">
+                        <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" className="social-link">
+                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                          </svg>
+                        </a>
+                        <a href={profile.links.scholar} target="_blank" rel="noopener noreferrer" className="social-link">
+                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
+                          </svg>
+                        </a>
+                        <a href={profile.links.researchgate} target="_blank" rel="noopener noreferrer" className="social-link">
+                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.894 8.221l-1.97-.345-.346-1.971a.3.3 0 0 0-.57 0l-.346 1.97-1.971.346a.3.3 0 0 0 0 .57l1.97.346.346 1.971a.3.3 0 0 0 .57 0l.346-1.97 1.971-.346a.3.3 0 0 0 0-.57z" />
+                          </svg>
+                        </a>
+                        <a href={`mailto:${profile.email}`} className="social-link">
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
-
-                <div className="flex justify-center fade-in">
-                  <div className="flex flex-col items-center justify-center gap-6">
-                    <img
-                      src="./assets/Photo.jpg"
-                      alt={`${profile.name} - GeoAI Specialist and Remote Sensing Expert`}
-                      className="profile-image object-cover"
-                    />
-                    {/* Social Links Around Image */}
-                    <div className="flex items-center justify-center gap-2">
-                      <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" className="social-link">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                        </svg>
-                      </a>
-                      <a href={profile.links.scholar} target="_blank" rel="noopener noreferrer" className="social-link">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
-                        </svg>
-                      </a>
-                      <a href={profile.links.researchgate} target="_blank" rel="noopener noreferrer" className="social-link">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.894 8.221l-1.97-.345-.346-1.971a.3.3 0 0 0-.57 0l-.346 1.97-1.971.346a.3.3 0 0 0 0 .57l1.97.346.346 1.971a.3.3 0 0 0 .57 0l.346-1.97 1.971-.346a.3.3 0 0 0 0-.57z" />
-                        </svg>
-                      </a>
-                      <a href={`mailto:${profile.email}`} className="social-link">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
               </div>
-            </div>
-          </section>
+            </section>
 
-          {/* About Section */}
-          <section id="section-about" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-              <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 sm:mb-12">
-                About Me
-              </h2>
-
-              <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-10 sm:mb-16">
-                <div className="card fade-in">
-                  <h3 className="text-2xl font-bold text-cyan mb-4">Mission</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    To leverage cutting-edge geospatial technologies and artificial intelligence to address pressing environmental and societal challenges. I specialize in transforming complex Earth observation data into actionable intelligence for sustainable development.
-                  </p>
-                </div>
-
-                <div className="card fade-in">
-                  <h3 className="text-2xl font-bold text-cyan mb-4">Vision</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Creating a future where GeoAI-powered insights drive evidence-based policy-making, enabling smarter urban planning, environmental conservation, and climate adaptation strategies worldwide.
-                  </p>
-                </div>
-              </div>
-
-              <div className="card mb-10 sm:mb-16">
-                <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-4 sm:mb-6">
-                  As a <span className="text-cyan font-semibold">GeoAI Specialist</span> and Earth Observation researcher with over 6 years of hands-on experience, I bridge the disciplines of Remote Sensing, GIS, and Artificial Intelligence to decode the complexities of our changing planet. My research portfolio spans urban wetland hydrology monitoring, land use/land cover dynamics, forest carbon sequestration, coastal shoreline change detection, and urban heat island analysis — published across internationally reputed journals including <span className="text-cyan font-semibold">GeoJournal (Springer)</span>, <span className="text-cyan font-semibold">Ecological Informatics (Elsevier)</span>, and <span className="text-cyan font-semibold">Ocean &amp; Coastal Management (Elsevier)</span>. I develop and validate GeoAI models — including XGBoost, Random Forest, SVM, and CA-Markov — on platforms such as Google Earth Engine, ArcGIS Pro, QGIS, and ERDAS Imagine, achieving classification accuracies as high as <span className="text-cyan font-semibold">0.97 Kappa</span>.
-                </p>
-                <p className="text-base sm:text-lg text-cyan italic font-medium mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-cyan/20">
-                  "Never Ever Settle, Eager to learn, perform and research."
-                </p>
-              </div>
-
-              {/* Research Interests */}
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Research Interests</h3>
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-                {researchInterests.map((area, idx) => (
-                  <div key={idx} className="card fade-in">
-                    <h4 className="text-xl font-bold text-cyan mb-4">{area.title}</h4>
-                    <ul className="space-y-2">
-                      {area.topics.map((topic, i) => (
-                        <li key={i} className="flex items-start gap-2 text-gray-300">
-                          <span className="text-cyan mt-1">▹</span>
-                          <span>{topic}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Publications Section */}
-          <section id="section-publications" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-dark-lighter/30">
-            <div className="max-w-7xl mx-auto">
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6 mb-8 sm:mb-12">
-                <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-                  Publications & Research
+            {/* About Section */}
+            <section id="section-about" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+              <div className="max-w-7xl mx-auto">
+                <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 sm:mb-12">
+                  About Me
                 </h2>
-                <div className="flex gap-3 sm:gap-4 flex-shrink-0">
-                  <div className="stat-card flex-1 sm:flex-initial min-w-0">
-                    <div className="stat-value">{publications.length}</div>
-                    <div className="text-xs sm:text-sm text-gray-400 mt-1">Papers</div>
+
+                <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-10 sm:mb-16">
+                  <div className="card fade-in">
+                    <h3 className="text-2xl font-bold text-cyan mb-4">{portfolioData?.about?.mission?.title || "Mission"}</h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      {portfolioData?.about?.mission?.text || ""}
+                    </p>
                   </div>
-                  <div className="stat-card flex-1 sm:flex-initial min-w-0">
-                    <div className="stat-value">{citationData.googleScholar.citations}</div>
-                    <div className="text-xs sm:text-sm text-gray-400 mt-1">Citations</div>
+
+                  <div className="card fade-in">
+                    <h3 className="text-2xl font-bold text-cyan mb-4">{portfolioData?.about?.vision?.title || "Vision"}</h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      {portfolioData?.about?.vision?.text || ""}
+                    </p>
                   </div>
                 </div>
-              </div>
 
-              <div className="timeline">
-                {publications.map((pub, idx) => (
-                  <div key={idx} className="timeline-item">
-                    <div className="card">
-                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 mb-3">
-                        <h3 className="text-lg sm:text-xl font-semibold text-white flex-1 min-w-0 break-words">{pub.title}</h3>
-                        <span className="tag font-mono flex-shrink-0 self-start">{pub.year}</span>
-                      </div>
-                      <p className="text-cyan font-medium mb-3">{pub.journal}</p>
-                      {pub.doi && (
-                        <a
-                          href={`https://doi.org/${pub.doi}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-gray-400 hover:text-cyan transition-colors break-all"
-                        >
-                          DOI: {pub.doi}
-                        </a>
-                      )}
-                      {pub.doiLink && (
-                        <a
-                          href={pub.doiLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-gray-400 hover:text-cyan transition-colors"
-                        >
-                          View Publication →
-                        </a>
-                      )}
-                      {pub.status && (
-                        <div className="mt-3">
-                          <span className="inline-block px-3 py-1 bg-yellow-500/10 text-yellow-500 rounded-md text-sm font-medium border border-yellow-500/20">
-                            {pub.status}
-                          </span>
-                        </div>
-                      )}
+                <div className="card mb-10 sm:mb-16">
+                  {Array.isArray(portfolioData?.about?.summary) && portfolioData.about.summary.length > 0 && (
+                    <div className="space-y-4 sm:space-y-6">
+                      {portfolioData.about.summary.map((t, i) => (
+                        <p key={i} className="text-base sm:text-lg text-gray-300 leading-relaxed">
+                          {t}
+                        </p>
+                      ))}
                     </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Journal Positions */}
-              <div className="mt-12 sm:mt-16">
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Journal Positions</h3>
-                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
-                  {journalPositions.map((pos, idx) => (
-                    <div key={idx} className="card">
-                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4">
-                        <div className="min-w-0">
-                          <h4 className="text-lg sm:text-xl font-semibold text-cyan mb-2">{pos.title}</h4>
-                          {pos.link ? (
-                            <a
-                              href={pos.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-gray-300 hover:text-cyan transition-colors"
-                            >
-                              {pos.journal} →
-                            </a>
-                          ) : (
-                            <p className="text-gray-300">{pos.journal}</p>
-                          )}
-                        </div>
-                        <span className="text-xs sm:text-sm text-gray-400 whitespace-nowrap flex-shrink-0">{pos.period}</span>
-                      </div>
-                    </div>
-                  ))}
+                  )}
+                  {portfolioData?.about?.quote && (
+                    <p className="text-base sm:text-lg text-cyan italic font-medium mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-cyan/20">
+                      “{portfolioData.about.quote}”
+                    </p>
+                  )}
                 </div>
-              </div>
-            </div>
-          </section>
 
-          {/* Experience Section */}
-          <section id="section-experience" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-              <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 sm:mb-12">
-                Professional Experience
-              </h2>
-
-              <div className="timeline">
-                {experience.map((exp, idx) => (
-                  <div key={idx} className="timeline-item">
-                    <div className="card">
-                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 mb-4">
-                        <div className="min-w-0">
-                          <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 break-words">{exp.role}</h3>
-                          <p className="text-cyan font-medium text-sm sm:text-base break-words">{exp.org}</p>
-                        </div>
-                        <span className="tag font-mono whitespace-nowrap flex-shrink-0 self-start">{exp.period}</span>
-                      </div>
-                      {exp.project && (
-                        <div className="mb-4 p-3 sm:p-4 bg-cyan/10 border-l-4 border-cyan rounded-r overflow-hidden">
-                          <p className="text-sm text-gray-300 break-words">
-                            <span className="font-semibold text-cyan">Project:</span> {exp.project}
-                          </p>
-                        </div>
-                      )}
-                      <ul className="space-y-3">
-                        {exp.details.map((detail, i) => (
-                          <li key={i} className="flex items-start gap-3">
+                {/* Research Interests */}
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Research Interests</h3>
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+                  {researchInterests.map((area, idx) => (
+                    <div key={idx} className="card fade-in">
+                      <h4 className="text-xl font-bold text-cyan mb-4">{area.title}</h4>
+                      <ul className="space-y-2">
+                        {area.topics.map((topic, i) => (
+                          <li key={i} className="flex items-start gap-2 text-gray-300">
                             <span className="text-cyan mt-1">▹</span>
-                            <span className="text-gray-300">{detail}</span>
+                            <span>{topic}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
 
-          {/* Education Section */}
-          <section id="section-education" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-dark-lighter/30">
-            <div className="max-w-7xl mx-auto">
-              <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 sm:mb-12">
-                Education & Certifications
-              </h2>
+            {/* Publications Section */}
+            <section id="section-publications" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-dark-lighter/30">
+              <div className="max-w-7xl mx-auto">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6 mb-8 sm:mb-12">
+                  <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+                    Publications & Research
+                  </h2>
+                  <div className="flex gap-3 sm:gap-4 flex-shrink-0">
+                    <div className="stat-card flex-1 sm:flex-initial min-w-0">
+                      <div className="stat-value">{publications.length}</div>
+                      <div className="text-xs sm:text-sm text-gray-400 mt-1">Papers</div>
+                    </div>
+                    <div className="stat-card flex-1 sm:flex-initial min-w-0">
+                      <div className="stat-value">{citationData.googleScholar.citations}</div>
+                      <div className="text-xs sm:text-sm text-gray-400 mt-1">Citations</div>
+                    </div>
+                  </div>
+                </div>
 
-              <div className="mb-10 sm:mb-16">
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Academic Background</h3>
                 <div className="timeline">
-                  {education.map((edu, idx) => (
+                  {publications.map((pub, idx) => (
+                    <div key={idx} className="timeline-item">
+                      <div className="card">
+                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 mb-3">
+                          <h3 className="text-lg sm:text-xl font-semibold text-white flex-1 min-w-0 break-words">{pub.title}</h3>
+                          <span className="tag font-mono flex-shrink-0 self-start">{pub.year}</span>
+                        </div>
+                        <p className="text-cyan font-medium mb-3">{pub.journal}</p>
+                        {pub.doi && (
+                          <a
+                            href={`https://doi.org/${pub.doi}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-gray-400 hover:text-cyan transition-colors break-all"
+                          >
+                            DOI: {pub.doi}
+                          </a>
+                        )}
+                        {pub.doiLink && (
+                          <a
+                            href={pub.doiLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-gray-400 hover:text-cyan transition-colors"
+                          >
+                            View Publication →
+                          </a>
+                        )}
+                        {pub.status && (
+                          <div className="mt-3">
+                            <span className="inline-block px-3 py-1 bg-yellow-500/10 text-yellow-500 rounded-md text-sm font-medium border border-yellow-500/20">
+                              {pub.status}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Journal Positions */}
+                <div className="mt-12 sm:mt-16">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Journal Positions</h3>
+                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                    {journalPositions.map((pos, idx) => (
+                      <div key={idx} className="card">
+                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4">
+                          <div className="min-w-0">
+                            <h4 className="text-lg sm:text-xl font-semibold text-cyan mb-2">{pos.title}</h4>
+                            {pos.link ? (
+                              <a
+                                href={pos.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-300 hover:text-cyan transition-colors"
+                              >
+                                {pos.journal} →
+                              </a>
+                            ) : (
+                              <p className="text-gray-300">{pos.journal}</p>
+                            )}
+                          </div>
+                          <span className="text-xs sm:text-sm text-gray-400 whitespace-nowrap flex-shrink-0">{pos.period}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Experience Section */}
+            <section id="section-experience" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+              <div className="max-w-7xl mx-auto">
+                <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 sm:mb-12">
+                  Professional Experience
+                </h2>
+
+                <div className="timeline">
+                  {experience.map((exp, idx) => (
                     <div key={idx} className="timeline-item">
                       <div className="card">
                         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 mb-4">
                           <div className="min-w-0">
-                            <h4 className="text-xl sm:text-2xl font-bold text-white mb-2 break-words">{edu.degree}</h4>
-                            <p className="text-cyan font-medium text-sm sm:text-base break-words">{edu.institution}</p>
+                            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 break-words">{exp.role}</h3>
+                            <p className="text-cyan font-medium text-sm sm:text-base break-words">{exp.org}</p>
                           </div>
-                          <span className="tag font-mono whitespace-nowrap flex-shrink-0 self-start">{edu.period}</span>
+                          <span className="tag font-mono whitespace-nowrap flex-shrink-0 self-start">{exp.period}</span>
                         </div>
-                        <div className="mb-3">
-                          <span className="inline-block px-3 py-1 bg-cyan/10 text-cyan rounded-md text-sm font-medium border border-cyan/20">
-                            Grade: {edu.grade}
-                          </span>
-                        </div>
-                        {edu.expertise && (
-                          <p className="text-sm text-cyan mb-3">
-                            <span className="font-semibold">Expertise:</span> {edu.expertise}
-                          </p>
+                        {exp.project && (
+                          <div className="mb-4 p-3 sm:p-4 bg-cyan/10 border-l-4 border-cyan rounded-r overflow-hidden">
+                            <p className="text-sm text-gray-300 break-words">
+                              <span className="font-semibold text-cyan">Project:</span> {exp.project}
+                            </p>
+                          </div>
                         )}
-                        <p className="text-gray-300 leading-relaxed">{edu.description}</p>
+                        <ul className="space-y-3">
+                          {exp.details.map((detail, i) => (
+                            <li key={i} className="flex items-start gap-3">
+                              <span className="text-cyan mt-1">▹</span>
+                              <span className="text-gray-300">{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
+            </section>
 
-              <div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Certifications</h3>
-                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
-                  {certifications.map((cert, idx) => (
-                    <div key={idx} className="card">
-                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-4 mb-3">
-                        <h4 className="text-base sm:text-lg font-semibold text-white break-words">{cert.title}</h4>
-                        <span className="text-xs sm:text-sm text-gray-400 whitespace-nowrap flex-shrink-0">{cert.date}</span>
-                      </div>
-                      <p className="text-cyan font-medium mb-3 text-sm sm:text-base">{cert.institution}</p>
-                      <p className="text-sm text-gray-300">{cert.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Skills Section */}
-          <section id="section-skills" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-              <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 sm:mb-12">
-                Technical Expertise
-              </h2>
-
-              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
-                {skills.map((skillSet, idx) => (
-                  <div key={idx} className="card">
-                    <h3 className="text-xl sm:text-2xl font-bold text-cyan mb-4 sm:mb-6">{skillSet.category}</h3>
-                    <ul className="space-y-4">
-                      {skillSet.tools.map((tool, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <span className="text-cyan mt-1">▹</span>
-                          <span className="text-gray-300">{tool}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Contact Section */}
-          <section id="section-contact" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-dark-lighter/30">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-8 sm:mb-12">
-                <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
-                  Let's Work Together
+            {/* Education Section */}
+            <section id="section-education" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-dark-lighter/30">
+              <div className="max-w-7xl mx-auto">
+                <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 sm:mb-12">
+                  Education & Certifications
                 </h2>
-                <p className="text-base sm:text-xl text-gray-400 px-2">
-                  Have a project in mind? Let's discuss how GeoAI can solve your challenges.
-                </p>
-              </div>
 
-              <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
-                <div className="card">
-                  <h3 className="text-xl font-bold text-cyan mb-4">Contact Information</h3>
-                  <div className="space-y-4">
-                    <div>
-                      <p className="text-sm text-gray-400 mb-1">Email</p>
-                      <a href={`mailto:${profile.email}`} className="text-gray-300 hover:text-cyan transition-colors">
-                        {profile.email}
-                      </a>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-400 mb-1">Phone</p>
-                      <a href={`tel:${profile.phone}`} className="text-gray-300 hover:text-cyan transition-colors">
-                        {profile.phone}
-                      </a>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-400 mb-1">Location</p>
-                      <p className="text-gray-300">Jaipur, Rajasthan, India</p>
-                    </div>
+                <div className="mb-10 sm:mb-16">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Academic Background</h3>
+                  <div className="timeline">
+                    {education.map((edu, idx) => (
+                      <div key={idx} className="timeline-item">
+                        <div className="card">
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 mb-4">
+                            <div className="min-w-0">
+                              <h4 className="text-xl sm:text-2xl font-bold text-white mb-2 break-words">{edu.degree}</h4>
+                              <p className="text-cyan font-medium text-sm sm:text-base break-words">{edu.institution}</p>
+                            </div>
+                            <span className="tag font-mono whitespace-nowrap flex-shrink-0 self-start">{edu.period}</span>
+                          </div>
+                          <div className="mb-3">
+                            <span className="inline-block px-3 py-1 bg-cyan/10 text-cyan rounded-md text-sm font-medium border border-cyan/20">
+                              Grade: {edu.grade}
+                            </span>
+                          </div>
+                          {edu.expertise && (
+                            <p className="text-sm text-cyan mb-3">
+                              <span className="font-semibold">Expertise:</span> {edu.expertise}
+                            </p>
+                          )}
+                          <p className="text-gray-300 leading-relaxed">{edu.description}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                <div className="card">
-                  <h3 className="text-xl font-bold text-cyan mb-4">Connect with Me</h3>
-                  <div className="flex flex-wrap gap-3">
-                    <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" className="social-link">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                      </svg>
-                    </a>
-                    <a href={profile.links.scholar} target="_blank" rel="noopener noreferrer" className="social-link">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
-                      </svg>
-                    </a>
-                    <a href={profile.links.researchgate} target="_blank" rel="noopener noreferrer" className="social-link">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.894 8.221l-1.97-.345-.346-1.971a.3.3 0 0 0-.57 0l-.346 1.97-1.971.346a.3.3 0 0 0 0 .57l1.97.346.346 1.971a.3.3 0 0 0 .57 0l.346-1.97 1.971-.346a.3.3 0 0 0 0-.57z" />
-                      </svg>
-                    </a>
-                    <a href={profile.links.orcid} target="_blank" rel="noopener noreferrer" className="social-link">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm5.568 8.16c-.169 0-.349.018-.54.054v8.348c.191.036.371.054.54.054 1.897 0 3.432-1.533 3.432-3.432 0-1.897-1.535-3.432-3.432-3.432zm-11.136 0c-1.897 0-3.432 1.535-3.432 3.432 0 1.899 1.535 3.432 3.432 3.432.169 0 .349-.018.54-.054V8.214c-.191-.036-.371-.054-.54-.054zm5.568 0c-.74 0-1.44.156-2.058.432v7.136c.618.276 1.318.432 2.058.432 1.897 0 3.432-1.533 3.432-3.432 0-1.899-1.535-3.432-3.432-3.432z" />
-                      </svg>
-                    </a>
+                <div>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Certifications</h3>
+                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                    {certifications.map((cert, idx) => (
+                      <div key={idx} className="card">
+                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-4 mb-3">
+                          <h4 className="text-base sm:text-lg font-semibold text-white break-words">{cert.title}</h4>
+                          <span className="text-xs sm:text-sm text-gray-400 whitespace-nowrap flex-shrink-0">{cert.date}</span>
+                        </div>
+                        <p className="text-cyan font-medium mb-3 text-sm sm:text-base">{cert.institution}</p>
+                        <p className="text-sm text-gray-300">{cert.description}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
+            </section>
 
-              {/* Contact Form */}
-              <div className="card">
-                <h3 className="text-2xl font-bold text-cyan mb-6">Send a Message</h3>
-                <form onSubmit={handleFormSubmit} className="space-y-4 sm:space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+            {/* Skills Section */}
+            <section id="section-skills" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+              <div className="max-w-7xl mx-auto">
+                <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 sm:mb-12">
+                  Technical Expertise
+                </h2>
+
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                  {skills.map((skillSet, idx) => (
+                    <div key={idx} className="card">
+                      <h3 className="text-xl sm:text-2xl font-bold text-cyan mb-4 sm:mb-6">{skillSet.category}</h3>
+                      <ul className="space-y-4">
+                        {skillSet.tools.map((tool, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <span className="text-cyan mt-1">▹</span>
+                            <span className="text-gray-300">{tool}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Contact Section */}
+            <section id="section-contact" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-dark-lighter/30">
+              <div className="max-w-4xl mx-auto">
+                <div className="text-center mb-8 sm:mb-12">
+                  <h2 className="section-header text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
+                    Let's Work Together
+                  </h2>
+                  <p className="text-base sm:text-xl text-gray-400 px-2">
+                    Have a project in mind? Let's discuss how GeoAI can solve your challenges.
+                  </p>
+                </div>
+
+                <div className="card mb-8 sm:mb-12">
+                  <h3 className="text-xl sm:text-2xl font-bold text-cyan mb-4 sm:mb-6">Contact & Connect</h3>
+                  <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-start">
+                   
+                      <div>
+                        <p className="text-sm text-gray-400 mb-1">Email</p>
+                        <a href={`mailto:${profile.email}`} className="text-gray-300 hover:text-cyan transition-colors break-words">
+                          {profile.email}
+                        </a>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-400 mb-1">Phone</p>
+                        <a href={`tel:${profile.phone}`} className="text-gray-300 hover:text-cyan transition-colors break-words">
+                          {profile.phone}
+                        </a>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-400 mb-1">WhatsApp</p>
+                        <a
+                          href={getWhatsAppLink(profile.phone, `Hi ${profile.name}, I found your portfolio and would like to connect.`)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-gray-300 hover:text-cyan transition-colors break-words"
+                          aria-label={`Chat with ${profile.name} on WhatsApp`}
+                        >
+                          <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] flex-shrink-0">
+                            <svg className="w-5 h-5" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+                              <path d="M16 3C9.383 3 4 8.383 4 15c0 2.338.675 4.574 1.955 6.5L4 29l7.699-1.897A11.92 11.92 0 0 0 16 27c6.617 0 12-5.383 12-12S22.617 3 16 3zm0 21.818c-1.96 0-3.871-.537-5.528-1.552l-.397-.238-4.57 1.127 1.219-4.45-.259-.414A9.765 9.765 0 0 1 6.235 15c0-5.39 4.375-9.765 9.765-9.765S25.765 9.61 25.765 15 21.39 24.818 16 24.818zm5.68-7.294c-.309-.155-1.83-.902-2.114-1.004-.284-.103-.491-.155-.698.155-.207.309-.803 1.004-.985 1.211-.181.207-.362.232-.671.078-.309-.155-1.305-.481-2.485-1.535-.918-.819-1.538-1.83-1.718-2.14-.181-.309-.02-.476.135-.63.139-.138.309-.362.464-.542.155-.181.207-.31.309-.516.103-.207.052-.387-.026-.542-.077-.155-.698-1.684-.955-2.31-.25-.601-.504-.52-.698-.53l-.595-.01c-.207 0-.542.078-.826.387-.284.31-1.084 1.06-1.084 2.588 0 1.528 1.11 3.006 1.265 3.212.155.207 2.183 3.337 5.288 4.678.739.319 1.315.51 1.764.652.741.236 1.414.203 1.947.123.594-.089 1.83-.749 2.089-1.47.258-.723.258-1.341.181-1.47-.078-.13-.284-.207-.593-.362z" />
+                            </svg>
+                          </span>
+                          <span>Message on WhatsApp</span>
+                        </a>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-400 mb-1">Location</p>
+                        <p className="text-gray-300">Jaipur, Rajasthan, India</p>
+                      </div>
+                   
+
+                  </div>
+                </div>
+
+                {/* Contact Form */}
+                <div className="card">
+                  <h3 className="text-2xl font-bold text-cyan mb-6">Send a Message</h3>
+                  <form onSubmit={handleFormSubmit} className="space-y-4 sm:space-y-6">
+                    <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
+                          Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleFormChange}
+                          required
+                          placeholder="Your Name"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
+                          Email *
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleFormChange}
+                          required
+                          placeholder="your.email@example.com"
+                        />
+                      </div>
+                    </div>
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
-                        Name *
+                      <label htmlFor="subject" className="block text-sm font-medium text-gray-400 mb-2">
+                        Subject *
                       </label>
                       <input
                         type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
+                        id="subject"
+                        name="subject"
+                        value={formData.subject}
                         onChange={handleFormChange}
                         required
-                        placeholder="Your Name"
+                        placeholder="Message Subject"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
-                        Email *
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">
+                        Message *
                       </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
+                      <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
                         onChange={handleFormChange}
                         required
-                        placeholder="your.email@example.com"
+                        rows="6"
+                        placeholder="Your message here..."
                       />
                     </div>
-                  </div>
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-400 mb-2">
-                      Subject *
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleFormChange}
-                      required
-                      placeholder="Message Subject"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleFormChange}
-                      required
-                      rows="6"
-                      placeholder="Your message here..."
-                    />
-                  </div>
 
-                  {formStatus.message && (
-                    <div className={`p-4 rounded-lg border ${formStatus.success
+                    {formStatus.message && (
+                      <div className={`p-4 rounded-lg border ${formStatus.success
                         ? 'bg-green-500/10 border-green-500/30 text-green-400'
                         : formStatus.error
                           ? 'bg-red-500/10 border-red-500/30 text-red-400'
                           : 'bg-cyan/10 border-cyan/30 text-cyan'
-                      }`}>
-                      {formStatus.message}
-                    </div>
-                  )}
-
-                  <button
-                    type="submit"
-                    disabled={formStatus.submitting}
-                    className="btn-primary w-full flex items-center justify-center gap-2"
-                  >
-                    {formStatus.submitting ? (
-                      <>
-                        <div className="loading-spinner"></div>
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        Send Message
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                      </>
+                        }`}>
+                        {formStatus.message}
+                      </div>
                     )}
-                  </button>
-                </form>
+
+                    <button
+                      type="submit"
+                      disabled={formStatus.submitting}
+                      className="btn-primary w-full flex items-center justify-center gap-2"
+                    >
+                      {formStatus.submitting ? (
+                        <>
+                          <div className="loading-spinner"></div>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Send Message
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                          </svg>
+                        </>
+                      )}
+                    </button>
+                  </form>
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
           </main>
 
           {/* Footer */}
@@ -1532,7 +1637,7 @@
                     © {new Date().getFullYear()} {profile.name}. All rights reserved.
                   </p>
                   <p className="text-xs sm:text-sm text-gray-500 mt-1">
-                    GeoAI Specialist & Remote Sensing Expert
+                    {profile.title}
                   </p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
@@ -1552,6 +1657,22 @@
               </div>
             </div>
           </footer>
+
+          {/* Floating WhatsApp button */}
+          {profile?.phone && (
+            <a
+              className="whatsapp-fab"
+              href={getWhatsAppLink(profile.phone, `Hi ${profile.name}, I found your portfolio and would like to connect.`)}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Chat with ${profile.name} on WhatsApp`}
+              title="Chat on WhatsApp"
+            >
+              <svg className="w-7 h-7" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+                <path d="M16 3C9.383 3 4 8.383 4 15c0 2.338.675 4.574 1.955 6.5L4 29l7.699-1.897A11.92 11.92 0 0 0 16 27c6.617 0 12-5.383 12-12S22.617 3 16 3zm0 21.818c-1.96 0-3.871-.537-5.528-1.552l-.397-.238-4.57 1.127 1.219-4.45-.259-.414A9.765 9.765 0 0 1 6.235 15c0-5.39 4.375-9.765 9.765-9.765S25.765 9.61 25.765 15 21.39 24.818 16 24.818zm5.68-7.294c-.309-.155-1.83-.902-2.114-1.004-.284-.103-.491-.155-.698.155-.207.309-.803 1.004-.985 1.211-.181.207-.362.232-.671.078-.309-.155-1.305-.481-2.485-1.535-.918-.819-1.538-1.83-1.718-2.14-.181-.309-.02-.476.135-.63.139-.138.309-.362.464-.542.155-.181.207-.31.309-.516.103-.207.052-.387-.026-.542-.077-.155-.698-1.684-.955-2.31-.25-.601-.504-.52-.698-.53l-.595-.01c-.207 0-.542.078-.826.387-.284.31-1.084 1.06-1.084 2.588 0 1.528 1.11 3.006 1.265 3.212.155.207 2.183 3.337 5.288 4.678.739.319 1.315.51 1.764.652.741.236 1.414.203 1.947.123.594-.089 1.83-.749 2.089-1.47.258-.723.258-1.341.181-1.47-.078-.13-.284-.207-.593-.362z" />
+              </svg>
+            </a>
+          )}
         </div>
       );
     }

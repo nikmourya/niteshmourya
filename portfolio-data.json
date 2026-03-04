@@ -321,6 +321,7 @@
   "profile": {
     "name": "Nitesh Kumar Mourya",
     "title": "GeoAI Specialist & Remote Sensing Expert",
+    "photo": "./assets/Photo.jpg",
     "location": "89, Sadbhawana Nagar, Nangal Susawatan, Amer, Jaipur, Rajasthan, India",
     "phone": "+91 8740970764",
     "email": "nik.gee.code@gmail.com",
@@ -343,6 +344,39 @@
       "researchgate": "https://www.researchgate.net/profile/Nitesh-Mourya-7",
       "orcid": "https://orcid.org/0000-0001-6391-9936"
     }
+  },
+  "site": {
+    "canonical": "https://niteshmourya.github.io/",
+    "siteName": "Nitesh Kumar Mourya - GeoAI Portfolio",
+    "title": "Nitesh Kumar Mourya | GeoAI Specialist & Remote Sensing Expert",
+    "description": "GeoAI Specialist and Remote Sensing Expert. Research Assistant at NLSIU Bengaluru. Expertise in GIS, Google Earth Engine, machine learning for spatial analytics. Publications and citations in leading journals.",
+    "keywords": "GeoAI, Remote Sensing, GIS, Geospatial Analysis, Earth Observation, Machine Learning, Google Earth Engine, ArcGIS, QGIS, LULC, Nitesh Kumar Mourya",
+    "ogImage": "https://niteshmourya.github.io/assets/Photo.jpg"
+  },
+  "hero": {
+ 
+    "slogans": [
+      "The ingenuity of GeoAI and human insight unlocks new ways to understand Earth's features, confront its problems, and design lasting solutions.",
+      "GeoAI isn't perfect—unless we expertly integrate robust training data, apply continuous knowledge and refinement, and fuel it with imaginative research planning. This collaboration transforms GeoAI into an essential tool for understanding and safeguarding Earth's ecosystems."
+    ],
+
+    "stats": {
+      "yearsExperience": 6
+    }
+  },
+  "about": {
+    "mission": {
+      "title": "Mission",
+      "text": "To leverage cutting-edge geospatial technologies and artificial intelligence to address pressing environmental and societal challenges. I specialize in transforming complex Earth observation data into actionable intelligence for sustainable development."
+    },
+    "vision": {
+      "title": "Vision",
+      "text": "Creating a future where GeoAI-powered insights drive evidence-based policy-making, enabling smarter urban planning, environmental conservation, and climate adaptation strategies worldwide."
+    },
+    "summary": [
+      "As a GeoAI Specialist and Earth Observation researcher with hands-on experience, I bridge Remote Sensing, GIS, and Artificial Intelligence to decode the complexities of our changing planet. My research spans urban wetland hydrology monitoring, land use/land cover dynamics, forest carbon sequestration, coastal shoreline change detection, and urban heat island analysis. I develop and validate GeoAI models (XGBoost, Random Forest, SVM, CA-Markov) using Google Earth Engine, ArcGIS Pro, QGIS, and ERDAS Imagine."
+    ],
+    "quote": "Never Ever Settle, Eager to Learn, Perform and Research"
   },
   "researchInterests": [
     {
