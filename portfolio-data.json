@@ -12,19 +12,19 @@
     }
   },
   "publications": [
-    {
-      "title": "Land Use/Land Cover Dynamics Study and Prediction In Jaipur City using CA Markov Model",
-      "journal": "GeoJournal (Springer)",
-      "doi": "10.1007/s10708-022-10593-9",
-      "year": 2022
+  {
+      "title": "Monitoring Wetland Hydrology and Surface Water Transformation in Jaipur Urban Ecosystem using GeoAI",
+      "journal": "GeoJournal",
+      "status": "Under Review",
+      "year": 2026
+    },  
+  {
+      "title": "Finding robust model for Urban Growth Prediction based on Land Use Land Cover Classification: A comparative study of CA Markov and Molusce models",
+      "journal": "Geography and Regional Future Studies",
+      "status": "Accepted",
+      "year": 2026
     },
-    {
-      "title": "Forest carbon sequestration mapping and economic quantification in Askot Wildlife Sanctuary",
-      "journal": "Ecological Informatics (ELSEVIER)",
-      "doi": "10.1016/j.ecoinf.2023.102428",
-      "year": 2023
-    },
-    {
+      {
       "title": "Evaluation of Shoreline Alteration Along the Jagatsinghpur District Coast, India (1990-2020)",
       "journal": "Ocean and Coastal Management (ELSEVIER)",
       "doi": "10.1016/j.ocecoaman.2024.107132",
@@ -38,16 +38,16 @@
       "year": 2024
     },
     {
-      "title": "Evaluating the Efficiency of ML based LULC Prediction Models",
-      "journal": "Technological Forecasting & Social Change",
-      "status": "Under Review",
-      "year": 2024
+      "title": "Forest carbon sequestration mapping and economic quantification in Askot Wildlife Sanctuary",
+      "journal": "Ecological Informatics (ELSEVIER)",
+      "doi": "10.1016/j.ecoinf.2023.102428",
+      "year": 2023
     },
     {
-      "title": "Monitoring Wetland Hydrology and Surface Water Transformation in Jaipur Urban Ecosystem using GeoAI",
-      "journal": "Journal of Hydrology",
-      "status": "Under Review",
-      "year": 2025
+      "title": "Land Use/Land Cover Dynamics Study and Prediction In Jaipur City using CA Markov Model",
+      "journal": "GeoJournal (Springer)",
+      "doi": "10.1007/s10708-022-10593-9",
+      "year": 2022
     }
   ],
   "experience": [
