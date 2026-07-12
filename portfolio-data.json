@@ -379,30 +379,82 @@
     "quote": "Never Ever Settle, Eager to Learn, Perform and Research"
   },
   "researchInterests": [
-    {
-      "title": "Geoinformatics and GeoAI",
-      "topics": [
-        "Application of machine learning and deep learning in Earth Observation",
-        "LULC classification using multi-source satellite data",
-        "SAR-based flood and hazard assessment",
-        "GeoAI-driven spatial decision support systems"
-      ]
-    },
-    {
-      "title": "Himalayan Ecosystem & Glaciology",
-      "topics": [
-        "Mountain ecosystems and climate sensitivity",
-        "Glacier dynamics and GLOF risks",
-        "Cryosphere monitoring with optical/SAR data"
-      ]
-    },
-    {
-      "title": "Urban Geography & Climate",
-      "topics": [
-        "Urban Heat Island assessment",
-        "Urban expansion patterns",
-        "Climate change in cities"
-      ]
-    }
-  ]
+  {
+    "title": "Geoinformatics and GeoAI",
+    "topics": [
+      "Machine Learning and Deep Learning for Earth Observation",
+      "GeoAI-Based Spatial Analytics and Decision Support Systems",
+      "Land Use/Land Cover (LULC) Classification and Change Detection",
+      "Predictive Geospatial Modeling",
+      "Multi-Source and Multi-Sensor Remote Sensing (Optical & SAR)",
+      "Spectral Feature Extraction and Texture Analysis",
+      "Spatio-Temporal Geospatial Analysis",
+      "SAR-Based Flood Mapping and Multi-Hazard Risk Assessment",
+      "Environmental Monitoring and Disaster Risk Management",
+      "Cloud-Based Geospatial Computing (Google Earth Engine)"
+    ]
+  },
+  {
+    "title": "Himalayan Ecosystem, Glaciology & Mountain Geography",
+    "topics": [
+      "Mountain Ecosystem Dynamics",
+      "Cryosphere Monitoring and Glacier Change Detection",
+      "Glacier Mass Balance and Melt Dynamics",
+      "Glacial Lake Outburst Flood (GLOF) Risk Assessment",
+      "Climate Change Impacts on Mountain Regions",
+      "Mountain Biodiversity and Hydrological Processes",
+      "Geomorphology and Terrain Analysis",
+      "Landslide Susceptibility and Mountain Hazards",
+      "Optical and SAR Remote Sensing for Cryosphere Studies",
+      "GIS-Based Mountain Environment Assessment"
+    ]
+  },
+  {
+    "title": "Physical Geography & Climate Studies",
+    "topics": [
+      "Geomorphology and Paleo-Tectonics",
+      "Climate Change and Paleoclimate Reconstruction",
+      "Microclimate Analysis",
+      "Groundwater Depletion and Land Use Dynamics",
+      "Coastal Environment and Coastal Processes",
+      "Air Quality and Atmospheric Pollution",
+      "Heat Waves and Extreme Climate Events",
+      "Tropical Cyclone Dynamics and Sea Surface Temperature",
+      "Mountain Climate Change and Environmental Response"
+    ]
+  },
+  {
+    "title": "Urban Geography & Urban Climate",
+    "topics": [
+      "Urban Expansion and Land Transformation",
+      "Urban Heat Island (UHI) Analysis",
+      "Urban Climate Change",
+      "Urban Environmental Sustainability",
+      "Heat Wave Vulnerability Assessment",
+      "Smart Cities and Sustainable Urban Planning",
+      "Urban Resilience and Climate Adaptation"
+    ]
+  },
+  {
+    "title": "Population Geography",
+    "topics": [
+      "Population Growth and Resource Sustainability",
+      "Population–Environment Interactions",
+      "Agricultural Development and Food Security",
+      "Population Distribution and Regional Development",
+      "Population Dynamics and Sustainable Development"
+    ]
+  },
+  {
+    "title": "Environmental Geography",
+    "topics": [
+      "Climate Change and Environmental Sustainability",
+      "Deforestation and Carbon Sequestration",
+      "Urban Ecology and Green Infrastructure",
+      "Environmental Conservation and Ecosystem Management",
+      "Ozone Depletion and Atmospheric Processes",
+      "GIS and Remote Sensing for Environmental Monitoring"
+    ]
+  }
+]
 }
