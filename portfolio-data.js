@@ -64,7 +64,7 @@ window.PORTFOLIO_DATA = {
     {
       "role": "Research Assistant (Geospatial Analysis)",
       "org": "National Law School of India University (NLSIU), Bengaluru",
-      "period": "June 2025 - Present",
+      "period": "June 2025 - May 2026",
       "project": "Cooling the City: Assessing the Impact of Green and Blue Spaces on Urban Heat Islands for Evidence-Based Urban Policy and Planning in Jaipur and Bengaluru (Funded by University of Toronto)",
       "details": [
         "Conducting geospatial analysis for the international project on urban cooling",
@@ -253,8 +253,8 @@ window.PORTFOLIO_DATA = {
     {
       "degree": "M.Sc. (Remote Sensing and Geoinformatics)",
       "institution": "Maharshi Dayanand Saraswati University, Ajmer",
-      "period": "October 2024 - Present (3rd Semester)",
-      "grade": "1st Semester: 77%, and 2nd Semester: 78%",
+      "period": "October 2024 - (4th Semester - Internship and Dissertation Work)",
+      "grade": "1st Semester: 77%, 2nd Semester: 78%, and 3rd Semester: 72%",
       "description": "Built foundation in satellite remote sensing, GIS, geodesy, GPS, and digital cartography. Expanded into thermal, microwave, and hyperspectral remote sensing, aerial photography, photogrammetry, digital image classification (including ANN and fuzzy methods). Practical work included image processing, map preparation, and seminar presentations. Presented research posters at departmental competitions and national conferences.",
       "expertise": "GeoAI Integration in Spatial Analysis, Remote Sensing, GeoAI modeling on GEE, Python and JavaScript"
     },
