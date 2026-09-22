@@ -1,4 +1,4 @@
-{
+window.PORTFOLIO_DATA = {
   "citationData": {
     "googleScholar": {
       "citations": 93,
@@ -12,19 +12,19 @@
     }
   },
   "publications": [
-  {
+    {
       "title": "Monitoring Wetland Hydrology and Surface Water Transformation in Jaipur Urban Ecosystem using GeoAI",
       "journal": "GeoJournal",
       "status": "Under Review",
       "year": 2026
-    },  
-  {
+    },
+    {
       "title": "Finding robust model for Urban Growth Prediction based on Land Use Land Cover Classification: A comparative study of CA Markov and Molusce models",
       "journal": "Geography and Regional Future Studies",
       "doi": "10.30466/grfs.2026.56701.1169",
       "year": 2026
     },
-      {
+    {
       "title": "Evaluation of Shoreline Alteration Along the Jagatsinghpur District Coast, India (1990-2020)",
       "journal": "Ocean and Coastal Management (ELSEVIER)",
       "doi": "10.1016/j.ocecoaman.2024.107132",
@@ -355,12 +355,10 @@
     "ogImage": "https://niteshmourya.github.io/assets/Photo.jpg"
   },
   "hero": {
- 
     "slogans": [
       "The ingenuity of GeoAI and human insight unlocks new ways to understand Earth's features, confront its problems, and design lasting solutions.",
       "GeoAI isn't perfect—unless we expertly integrate robust training data, apply continuous knowledge and refinement, and fuel it with imaginative research planning. This collaboration transforms GeoAI into an essential tool for understanding and safeguarding Earth's ecosystems."
     ],
-
     "stats": {
       "yearsExperience": 6
     }
@@ -406,4 +404,4 @@
       ]
     }
   ]
-}
+};
