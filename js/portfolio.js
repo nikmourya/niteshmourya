@@ -819,8 +819,9 @@
     render();
 
     try {
-      let data;
-      try {
+      let data = window.PORTFOLIO_DATA;
+
+      if (!data) {
         const dataUrl = new URL('portfolio-data.json', document.baseURI).href;
         const response = await fetch(dataUrl, {
           cache: 'no-store',
@@ -832,9 +833,6 @@
         }
 
         data = await response.json();
-      } catch (fetchError) {
-        data = window.PORTFOLIO_FALLBACK_DATA;
-        if (!data) throw fetchError;
       }
 
       state.data = data;
@@ -842,7 +840,7 @@
       render();
     } catch (error) {
       console.error('Failed to load portfolio-data.json:', error);
-      state.loadError = "Couldn't load portfolio-data.json. Please serve this folder with a local web server, or provide inline portfolio data.";
+      state.loadError = "Couldn't load portfolio-data.json. If you're opening index.html directly, most browsers block fetch() for local files. Please run this folder with a local web server (e.g., VS Code Live Server).";
       render();
     }
   }
