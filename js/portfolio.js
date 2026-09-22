@@ -818,46 +818,25 @@
     state.data = null;
     render();
 
-    if (window.PORTFOLIO_DATA) {
-      state.data = window.PORTFOLIO_DATA;
-      applySiteMeta(state.data);
-      render();
-      return;
-    }
-
-    const dataUrls = Array.from(new Set([
-      new URL('./portfolio-data.json', window.location.href).href,
-      new URL('portfolio-data.json', window.location.href).href,
-      new URL('/portfolio-data.json', window.location.origin).href,
-    ]));
-
-    let lastError = null;
-
-    for (const dataUrl of dataUrls) {
-      try {
-        const response = await fetch(dataUrl, {
-          cache: 'no-store',
-          headers: { Accept: 'application/json' },
-        });
+    try {
+      const response = await fetch('/portfolio-data.json', {
+        cache: 'no-store',
+        headers: { Accept: 'application/json' },
+      });
 
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
 
-        const data = await response.json();
-        state.data = data;
-        applySiteMeta(data);
-        render();
-        return;
-      } catch (error) {
-        lastError = error;
-        console.warn(`Failed to load portfolio data from ${dataUrl}:`, error);
-      }
+      const data = await response.json();
+      state.data = data;
+      applySiteMeta(data);
+      render();
+    } catch (error) {
+      console.error('Failed to load portfolio-data.json:', error);
+      state.loadError = "Couldn't load portfolio-data.json. If you're opening index.html directly, most browsers block fetch() for local files. Please run this folder with a local web server (e.g., VS Code Live Server).";
+      render();
     }
-
-    console.error('Failed to load portfolio-data.json:', lastError);
-    state.loadError = "Couldn't load portfolio-data.json. If you're opening index.html directly, most browsers block fetch() for local files. Please run this folder with a local web server (e.g., VS Code Live Server).";
-    render();
   }
 
   if (document.readyState === 'loading') {
