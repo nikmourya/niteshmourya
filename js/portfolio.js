@@ -819,7 +819,7 @@
     render();
 
     try {
-      const response = await fetch('./portfolio-data.json', {
+      const response = await fetch('/portfolio-data.json', {
         cache: 'no-store',
         headers: { Accept: 'application/json' },
       });
