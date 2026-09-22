@@ -1,9 +1,9 @@
 window.PORTFOLIO_DATA = {
   "citationData": {
     "googleScholar": {
-      "citations": 93,
+      "citations": 115,
       "hIndex": 3,
-      "i10Index": 2
+      "i10Index": 3
     },
     "researchGate": {
       "reads": 0,
