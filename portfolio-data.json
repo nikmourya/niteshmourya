@@ -227,7 +227,7 @@
         "Biodiversity and Ecosystem Analysis – GeoAI-based Random Forest modeling.",
         "LULC Modeling – Support Vector Machine, XGBoost, Random Forest, and Random Tree on GEE and ArcGIS Pro.",
         "Google Earth Engine – Cloud-based LULC mapping, AI-based classification (SVM, Random Forest), SAR Data Processing, Wetland Change Detection, GeoAI Modeling for Biodiversity and Ecosystem, and GeoAI modeling for Park Cooling Parameters.",
-        "Google Colab - LULC Processing (XGboost Modeling), Downscaling Continue Raster Data ( LST and Rainfall), GeoAI Modeling, Image Pre-Processing, Cloud Masking and Gap Filling, Generate Mean DN value or season and LULC classification trough GEE API.",
+        "Google Colab - LULC Processing (XGboost Modeling), Downscaling Continue Raster Data ( LST and Rainfall), GeoAI Modeling, Image Pre-Processing, Cloud Masking and Gap Filling, Generate Mean DN value or season and LULC classification trough GEE API."
       ]
     },
     {
