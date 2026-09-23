@@ -26,6 +26,8 @@
   };
 
   let scrollSpyObserver = null;
+  let scrollListenerBound = false;
+  let appEventsBound = false;
 
   function escapeHtml(value) {
     return String(value ?? '')
@@ -146,8 +148,8 @@
           <h2 class="text-xl font-bold text-cyan mb-2">Failed to Load Portfolio Data</h2>
           <p class="text-gray-400 text-sm mb-4">${escapeHtml(message)}</p>
           <p class="text-gray-500 text-xs">
-            Make sure <code class="text-cyan">portfolio-data.json</code> is in the same directory as
-            <code class="text-cyan">index.html</code>, or serve the site via a local web server.
+            Make sure <code class="text-cyan">portfolio-data.js</code> loads before
+            <code class="text-cyan">js/portfolio.js</code>.
           </p>
           <button type="button" id="retry-load" class="btn-primary mt-6 text-sm">Retry</button>
         </div>
@@ -670,6 +672,8 @@
   }
 
   function setupScrollListener() {
+    if (scrollListenerBound) return;
+    scrollListenerBound = true;
     window.addEventListener('scroll', () => {
       const scrolled = window.scrollY > 50;
       if (scrolled !== state.scrolled) {
@@ -771,24 +775,27 @@
     const app = document.getElementById('app');
     if (!app) return;
 
-    app.addEventListener('click', (event) => {
-      const navButton = event.target.closest('[data-nav]');
-      if (navButton) {
-        event.preventDefault();
-        scrollToSection(navButton.getAttribute('data-nav'));
-        return;
-      }
+    if (!appEventsBound) {
+      appEventsBound = true;
+      app.addEventListener('click', (event) => {
+        const navButton = event.target.closest('[data-nav]');
+        if (navButton) {
+          event.preventDefault();
+          scrollToSection(navButton.getAttribute('data-nav'));
+          return;
+        }
 
-      if (event.target.closest('#mobile-menu-toggle')) {
-        state.mobileMenuOpen = !state.mobileMenuOpen;
-        updateNavUI();
-        return;
-      }
+        if (event.target.closest('#mobile-menu-toggle')) {
+          state.mobileMenuOpen = !state.mobileMenuOpen;
+          updateNavUI();
+          return;
+        }
 
-      if (event.target.closest('#retry-load')) {
-        loadPortfolioData();
-      }
-    });
+        if (event.target.closest('#retry-load')) {
+          loadPortfolioData();
+        }
+      });
+    }
 
     const form = document.getElementById('contact-form');
     if (form) form.addEventListener('submit', handleFormSubmit);
@@ -813,34 +820,23 @@
     }
   }
 
-  async function loadPortfolioData() {
+  function loadPortfolioData() {
     state.loadError = null;
     state.data = null;
     render();
 
     try {
-      let data = window.PORTFOLIO_DATA;
-
-      if (!data) {
-        const dataUrl = new URL('portfolio-data.json', document.baseURI).href;
-        const response = await fetch(dataUrl, {
-          cache: 'no-store',
-          headers: { Accept: 'application/json' },
-        });
-
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
-
-        data = await response.json();
+      const data = window.PORTFOLIO_DATA;
+      if (!data?.profile) {
+        throw new Error('window.PORTFOLIO_DATA is missing or incomplete');
       }
 
       state.data = data;
       applySiteMeta(data);
       render();
     } catch (error) {
-      console.error('Failed to load portfolio-data.json:', error);
-      state.loadError = "Couldn't load portfolio-data.json. If you're opening index.html directly, most browsers block fetch() for local files. Please run this folder with a local web server (e.g., VS Code Live Server).";
+      console.error('Failed to load portfolio-data.js:', error);
+      state.loadError = "Couldn't load portfolio data. Ensure portfolio-data.js is present and loaded before js/portfolio.js.";
       render();
     }
   }

@@ -6,9 +6,9 @@ window.PORTFOLIO_DATA = {
       "i10Index": 3
     },
     "researchGate": {
-      "reads": 0,
-      "citations": 0,
-      "recommendations": 0
+      "Research Interest Score": 140.4,
+      "citations": 104,
+      "hIndex": 3
     }
   },
   "publications": [
@@ -51,10 +51,20 @@ window.PORTFOLIO_DATA = {
     }
   ],
   "experience": [
+     {
+      "role": "Research Internship and Desertation Work",
+      "org": "Forest Department, Government of Rajasthan, Jaipur",
+      "period": "25 May 2025 - 25 November 2025",
+      "details": [
+        "LULC Change Detection and Prediction using SVM CA-Markov Model in Reserve Forest Ecosystem",
+        "XGBoost Modeling for Downscaling of Continuous Raster Data (LST and Rainfall) in Reserve Forest Ecosystem by Colab Python Framework",
+        "Habitat Dynamics and Biodiversity Assessment Utilizing Hybrid LSTM, XGBoost, and InVEST, GeoAI Modeling Framework for Reserve Forest Ecosystem",
+      ]
+    },
     {
       "role": "Research Internship",
       "org": "MSME PPDC AGRA",
-      "period": "25 Nov 2025 - 25 Dec 2025",
+      "period": "25 November 2025 - 25 December 2025",
       "details": [
         "Completed specialized online training on research methodologies and online internship frameworks",
         "Gained practical skills in structured research processes, virtual collaboration tools, and internship project management",
@@ -212,7 +222,7 @@ window.PORTFOLIO_DATA = {
       ]
     },
     {
-      "category": "Image Processing & GeoSpatail Modeling",
+      "category": "Image Processing & Geospatial Modeling",
       "tools": [
         "ERDAS Imagine – Digital image preprocessing (radiometric and atmospheric correction, image enhancement), geometric correction and orthorectification, supervised and unsupervised classification, accuracy assessment (achieving up to 0.97 Kappa accuracy in LULC mapping), and multi-temporal change detection.",
         "ArcGIS Pro – AI-based supervised image classification using machine learning algorithms (SVM, Random Tree, Random Forest) with integrated accuracy assessment and validation.",
