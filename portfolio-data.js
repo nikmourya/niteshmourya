@@ -52,7 +52,7 @@ window.PORTFOLIO_DATA = {
   ],
   "experience": [
      {
-      "role": "Research Internship and Desertation Work",
+      "role": "Research Internship and Dissertation Work",
       "org": "Forest Department, Government of Rajasthan, Jaipur",
       "period": "25 May 2025 - 25 November 2025",
       "details": [
