@@ -53,7 +53,7 @@ window.PORTFOLIO_DATA = {
   "experience": [
      {
       "role": "Research Internship and Dissertation Work",
-      "org": "Forest Department, Government of Rajasthan, Jaipur",
+      "org": "(Wildlife) Forest Department, Government of Rajasthan, Jaipur",
       "period": "25 May 2026 - 25 November 2026",
       "details": [
   "Multi-Season LULC Change Detection & Forecasting (1995–2052) using SVM–CA-Markov (Terraset) in a Semi-Arid Reserve Forest Ecosystem",
