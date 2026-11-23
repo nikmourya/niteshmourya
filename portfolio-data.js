@@ -60,7 +60,7 @@ window.PORTFOLIO_DATA = {
   "Hybrid XGBoost–Bilinear Residual Spatial Downscaling (30 m–1 km to 10 m) of LST, Rainfall, and Terrain Grids in Google Colab",
   "Multi-Species Prey Richness Modeling using a PyTorch DeepSDM Neural Network Ensemble with Spatial Block Cross-Validation",
   "Pixel-Level Ecological Succession Modeling (Connell–Slatyer Framework) Across Multi-Decadal Dry Deciduous Forest Trajectories",
-  "Tiger Habitat Quality & Bidirectional Least-Cost Corridor Connectivity Modeling (InVEST v3.19.0 & scikit-image) in the Sariska Tiger Reserve And Jamwa-Ramgarh Wild Life Sanctuary Complex"
+  "Tiger Habitat Quality & Bidirectional Least-Cost Corridor Connectivity Modeling (InVEST v3.19.0) in the Sariska Tiger Reserve And Jamwa-Ramgarh Wild Life Sanctuary Complex"
 ]
     },
     {
