@@ -56,7 +56,7 @@ window.PORTFOLIO_DATA = {
       "org": "Forest Department, Government of Rajasthan, Jaipur",
       "period": "25 May 2026 - 25 November 2026",
       "details": [
-  "Multi-Season LULC Change Detection & Forecasting (1995–2052) using XGBoost and SVM–CA-Markov in a Semi-Arid Reserve Forest Ecosystem",
+  "Multi-Season LULC Change Detection & Forecasting (1995–2052) using SVM–CA-Markov (Terraset) in a Semi-Arid Reserve Forest Ecosystem",
   "Hybrid XGBoost–Bilinear Residual Spatial Downscaling (30 m–1 km to 10 m) of LST, Rainfall, and Terrain Grids in Google Colab",
   "Multi-Species Prey Richness Modeling using a PyTorch DeepSDM Neural Network Ensemble with Spatial Block Cross-Validation",
   "Pixel-Level Ecological Succession Modeling (Connell–Slatyer Framework) Across Multi-Decadal Dry Deciduous Forest Trajectories",
