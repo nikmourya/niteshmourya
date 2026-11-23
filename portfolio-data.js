@@ -54,12 +54,14 @@ window.PORTFOLIO_DATA = {
      {
       "role": "Research Internship and Dissertation Work",
       "org": "Forest Department, Government of Rajasthan, Jaipur",
-      "period": "25 May 2025 - 25 November 2025",
+      "period": "25 May 2026 - 25 November 2026",
       "details": [
-        "LULC Change Detection and Prediction using SVM CA-Markov Model in Reserve Forest Ecosystem",
-        "XGBoost Modeling for Downscaling of Continuous Raster Data (LST and Rainfall) in Reserve Forest Ecosystem by Colab Python Framework",
-        "Habitat Dynamics and Biodiversity Assessment Utilizing Hybrid LSTM, XGBoost, and InVEST, GeoAI Modeling Framework for Reserve Forest Ecosystem",
-      ]
+  "Multi-Season LULC Change Detection & Forecasting (1995–2052) using XGBoost and SVM–CA-Markov in a Semi-Arid Reserve Forest Ecosystem",
+  "Hybrid XGBoost–Bilinear Residual Spatial Downscaling (30 m–1 km to 10 m) of LST, Rainfall, and Terrain Grids in Google Colab",
+  "Multi-Species Prey Richness Modeling using a PyTorch DeepSDM Neural Network Ensemble with Spatial Block Cross-Validation",
+  "Pixel-Level Ecological Succession Modeling (Connell–Slatyer Framework) Across Multi-Decadal Dry Deciduous Forest Trajectories",
+  "Tiger Habitat Quality & Bidirectional Least-Cost Corridor Connectivity Modeling (InVEST v3.19.0 & scikit-image) in the Sariska Tiger Reserve And Jamwa Ramgarh Landscape"
+]
     },
     {
       "role": "Research Internship",
